@@ -41,7 +41,7 @@ Follow these steps to set up **NestOps** on your system:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/nestops.git
+   git clone https://github.com/McTonderski/NestOps.git
    cd nestops
    ```
 
