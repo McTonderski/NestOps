@@ -1,0 +1,63 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 35,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( workOrdersTable.triggeredRow.agent || ''))(editOrderAgent.options, editOrderAgent.serverSideFiltering) }}",
+  "displayName": "Select",
+  "dynamicBindingPathList": [
+    {
+      "key": "options"
+    },
+    {
+      "key": "defaultOptionValue"
+    },
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bd99caba.svg",
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "vpduhjc9fo",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelText": "",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 32,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onOptionChange": "",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 7.193359375,
+  "parentId": "isyg3igswg",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"label\": {{select_agent.data[0].agent}},\n    \"value\": {{select_agent.data[0].agent}}\n  },\n\t  {\n    \"label\": {{select_agent.data[2].agent}},\n    \"value\": {{select_agent.data[2].agent}}\n  },\n\t  {\n    \"label\": {{select_agent.data[3].agent}},\n    \"value\": {{select_agent.data[3].agent}}\n  },\n\t  {\n    \"label\": {{select_agent.data[4].agent}},\n    \"value\": {{select_agent.data[4].agent}}\n  },\n\t  {\n    \"label\": {{select_agent.data[1].agent}},\n    \"value\": {{select_agent.data[1].agent}}\n  }\n]",
+  "topRow": 31,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "6teo20b66e",
+  "widgetName": "editOrderAgent"
+}

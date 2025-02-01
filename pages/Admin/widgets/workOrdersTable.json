@@ -1,0 +1,500 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 109,
+  "boxShadow": "none",
+  "cellBackground": "transparent",
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "work_id",
+    "equipment",
+    "category",
+    "description",
+    "request_date",
+    "agent",
+    "maintenance_notes",
+    "completed",
+    "hours",
+    "customer_name",
+    "customer_email",
+    "total_cost",
+    "mat_cost",
+    "customColumn1"
+  ],
+  "columnSizeMap": {
+    "category": 198,
+    "completed": 124,
+    "customColumn1": 82,
+    "equipment": 124,
+    "status": 75,
+    "step": 62,
+    "task": 245,
+    "work_id": 85
+  },
+  "defaultPageSize": 0,
+  "defaultSelectedRow": "0",
+  "delimiter": ",",
+  "derivedColumns": {
+    "customColumn1": {
+      "borderRadius": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+      "boxShadow": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( 'none'))}}",
+      "buttonColor": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
+      "buttonLabel": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( 'Edit'))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "TERTIARY",
+      "cellBackground": "transparent",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "enableFilter": true,
+      "enableSort": true,
+      "iconName": "edit",
+      "id": "customColumn1",
+      "index": 13,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Edit",
+      "labelColor": "#FFFFFF",
+      "menuColor": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
+      "onClick": "{{showModal('Modal1')}}",
+      "width": 150
+    }
+  },
+  "displayName": "Table",
+  "dynamicBindingPathList": [
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonLabel"
+    },
+    {
+      "key": "primaryColumns.mat_cost.computedValue"
+    },
+    {
+      "key": "primaryColumns.total_cost.computedValue"
+    },
+    {
+      "key": "primaryColumns.work_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.customer_email.computedValue"
+    },
+    {
+      "key": "primaryColumns.customer_name.computedValue"
+    },
+    {
+      "key": "primaryColumns.hours.computedValue"
+    },
+    {
+      "key": "primaryColumns.completed.computedValue"
+    },
+    {
+      "key": "primaryColumns.maintenance_notes.computedValue"
+    },
+    {
+      "key": "primaryColumns.agent.computedValue"
+    },
+    {
+      "key": "primaryColumns.request_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.description.computedValue"
+    },
+    {
+      "key": "primaryColumns.category.computedValue"
+    },
+    {
+      "key": "primaryColumns.equipment.computedValue"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "derivedColumns.customColumn1.buttonLabel"
+    },
+    {
+      "key": "derivedColumns.customColumn1.menuColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.menuColor"
+    },
+    {
+      "key": "derivedColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "derivedColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "totalRecordsCount"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onPageChange"
+    },
+    {
+      "key": "onRowSelected"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    },
+    {
+      "key": "onPageChange"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    }
+  ],
+  "enableClientSideSearch": false,
+  "hideCard": false,
+  "horizontalAlignment": "LEFT",
+  "iconSVG": "/static/media/icon.db8a9cbd.svg",
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": false,
+  "isVisibleFilters": true,
+  "isVisiblePagination": true,
+  "isVisibleSearch": true,
+  "key": "56eiocmwj5",
+  "label": "Data",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 12,
+  "onPageChange": "{{selectAgent.selectedOptionValue ? select_work_ordersAgent.run() : select_work_orders.run()}}",
+  "onRowSelected": "",
+  "parentColumnSpace": 6.4609375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "primaryColumns": {
+    "agent": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.agent))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "agent",
+      "index": 4,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Agent",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "category": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.category))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "category",
+      "index": 1,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Category",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "completed": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.completed))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "completed",
+      "index": 6,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Completed?",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "borderRadius": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+      "boxShadow": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( 'none'))}}",
+      "buttonColor": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
+      "buttonLabel": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( 'Edit'))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "TERTIARY",
+      "cellBackground": "transparent",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "enableFilter": true,
+      "enableSort": true,
+      "iconName": "edit",
+      "id": "customColumn1",
+      "index": 13,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Edit",
+      "labelColor": "#FFFFFF",
+      "menuColor": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
+      "onClick": "{{showModal('Modal1')}}",
+      "width": 150
+    },
+    "customer_email": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.customer_email))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customer_email",
+      "index": 9,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": false,
+      "label": "Customer Email",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customer_name": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.customer_name))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customer_name",
+      "index": 8,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": false,
+      "label": "Customer Name",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "description": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.description))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "description",
+      "index": 2,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": false,
+      "label": "description",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "equipment": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.equipment))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "equipment",
+      "index": 0,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Equipment",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "hours": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.hours))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "hours",
+      "index": 7,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": false,
+      "label": "Hours spent",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "maintenance_notes": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.maintenance_notes))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "maintenance_notes",
+      "index": 5,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": false,
+      "label": "maintenance_notes",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "mat_cost": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.mat_cost))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "mat_cost",
+      "index": 12,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": false,
+      "label": "Material Cost",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "request_date": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "date",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.request_date))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "iconName": "",
+      "id": "request_date",
+      "index": 3,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Date",
+      "outputFormat": "DD/MM/YYYY",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "total_cost": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.total_cost))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "total_cost",
+      "index": 11,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": false,
+      "label": "Total Cost",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "work_id": {
+      "borderRadius": "0px",
+      "boxShadow": "none",
+      "cellBackground": "transparent",
+      "columnType": "text",
+      "computedValue": "{{workOrdersTable.sanitizedTableData.map((currentRow) => ( currentRow.work_id))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "work_id",
+      "index": 0,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Work ID",
+      "textSize": "0.875rem",
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "rightColumn": 63,
+  "searchKey": "",
+  "serverSidePaginationEnabled": true,
+  "tableData": "{{selectAgent.selectedOptionValue.length != 0 ? select_work_ordersAgent.data :   select_work_orders.data}}",
+  "textSize": "0.875rem",
+  "topRow": 50,
+  "totalRecordsCount": "{{selectAgent.selectedOptionValue ? select_work_ordersAgentPage.data.length : select_work_ordersPage.data.length}}",
+  "type": "TABLE_WIDGET",
+  "version": 3,
+  "verticalAlignment": "CENTER",
+  "widgetId": "ixpr6lj9nu",
+  "widgetName": "workOrdersTable"
+}

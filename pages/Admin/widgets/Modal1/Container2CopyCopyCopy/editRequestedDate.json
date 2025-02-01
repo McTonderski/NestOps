@@ -1,0 +1,54 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 31,
+  "boxShadow": "none",
+  "closeOnSelection": true,
+  "dateFormat": "YYYY-MM-DD",
+  "datePickerType": "DATE_PICKER",
+  "defaultDate": "{{\nworkOrdersTable.triggeredRow.request_date ? \nmoment(workOrdersTable.triggeredRow.request_date, \"YYYY-MM-DD\") : new Date().toISOString() }}",
+  "displayName": "DatePicker",
+  "dynamicBindingPathList": [
+    {
+      "key": "defaultDate"
+    },
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "firstDayOfWeek": 0,
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.300e5ab8.svg",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "g6ypr5b6bx",
+  "label": "",
+  "labelTextSize": "1rem",
+  "leftColumn": 32,
+  "maxDate": "2121-12-31T18:29:00.000Z",
+  "maxDynamicHeight": 9000,
+  "minDate": "1920-12-31T18:30:00.000Z",
+  "minDynamicHeight": 4,
+  "parentColumnSpace": 5.853515625,
+  "parentId": "isyg3igswg",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 53,
+  "shortcuts": false,
+  "timePrecision": "None",
+  "topRow": 27,
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "o8ajdh033b",
+  "widgetName": "editRequestedDate"
+}
