@@ -26,7 +26,7 @@
   "isVisible": true,
   "key": "ea7apjwric",
   "leftColumn": 9,
-  "onClick": "{{removeValue('JWTToken').then(() => {\n  navigateTo('Login', {}, 'SAME_WINDOW');\n});}}",
+  "onClick": "{{removeValue('JWTToken').then(() => {\n  navigateTo('Login', {}, 'SAME_WINDOW');\n  showAlert('logout', 'info');\n});}}",
   "parentColumnSpace": 4.021484375,
   "parentId": "95acg6i429",
   "parentRowSpace": 10,
