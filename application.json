@@ -5,10 +5,10 @@
       "colorStyle": "light",
       "logoAssetId": "",
       "logoConfiguration": "logoAndApplicationTitle",
-      "navStyle": "sidebar",
-      "orientation": "side",
+      "navStyle": "inline",
+      "orientation": "top",
       "position": "static",
-      "showNavbar": true,
+      "showNavbar": false,
       "showSignIn": true
     },
     "themeSetting": {
@@ -53,10 +53,10 @@
       "colorStyle": "light",
       "logoAssetId": "",
       "logoConfiguration": "logoAndApplicationTitle",
-      "navStyle": "sidebar",
-      "orientation": "side",
+      "navStyle": "inline",
+      "orientation": "top",
       "position": "static",
-      "showNavbar": true,
+      "showNavbar": false,
       "showSignIn": true
     },
     "themeSetting": {
