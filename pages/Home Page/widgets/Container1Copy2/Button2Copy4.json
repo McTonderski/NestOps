@@ -26,7 +26,7 @@
   "isVisible": true,
   "key": "ea7apjwric",
   "leftColumn": 9,
-  "onClick": "{{logout.run()}}",
+  "onClick": "{{removeValue('JWTToken');}}",
   "parentColumnSpace": 4.021484375,
   "parentId": "95acg6i429",
   "parentRowSpace": 10,
