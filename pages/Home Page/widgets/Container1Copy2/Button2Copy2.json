@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 29,
   "boxShadow": "none",
   "buttonColor": "transparent",
   "buttonVariant": "PRIMARY",
@@ -40,7 +40,7 @@
     "submit"
   ],
   "text": "Admin",
-  "topRow": 28,
+  "topRow": 25,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "jf67dssm7t",

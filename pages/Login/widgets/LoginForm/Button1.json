@@ -31,7 +31,7 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "onClick": "{{LoginQuery.run().then(() => {\n  navigateTo('Home Page', {}, 'SAME_WINDOW');\n});}}",
+  "onClick": "{{LoginQuery.run().then(() => {\n  navigateTo('Home Page', {}, 'SAME_WINDOW');\n  storeValue('JWTToken', LoginQuery.responseMeta);\n});}}",
   "parentId": "noq3r3h3aw",
   "placement": "CENTER",
   "recaptchaType": "V3",

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "0px",
-  "bottomRow": 96,
+  "bottomRow": 114,
   "boxShadow": "none",
   "defaultImage": "https://s3.us-east-2.amazonaws.com/template.appsmith.com/bdd.png",
   "displayName": "Image",
@@ -25,7 +25,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 64,
-  "topRow": 74,
+  "topRow": 92,
   "type": "IMAGE_WIDGET",
   "version": 1,
   "widgetId": "whiz0hl73p",
