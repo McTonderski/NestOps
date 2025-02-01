@@ -1,5 +1,0 @@
-{
-  "username": "janedoe",
-  "password": "securepassword",
-	"role": "admin"
-}

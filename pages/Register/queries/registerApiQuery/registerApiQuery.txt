@@ -1,0 +1,5 @@
+{
+	"username": {{EmailInput.text}},
+	"password": {{PasswordInput.text}},
+	"role": "user"
+}

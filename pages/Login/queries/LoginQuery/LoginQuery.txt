@@ -1,4 +1,4 @@
 {
-	"username": "janedoe",
-	"password": "securepassword"
+	"username": {{LoginInput.text}},
+	"password": {{PasswordInput.text}}
 }

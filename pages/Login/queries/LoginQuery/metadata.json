@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n\t\"username\": \"janedoe\",\n\t\"password\": \"securepassword\"\n}",
+      "body": "{\n\t\"username\": {{LoginInput.text}},\n\t\"password\": {{PasswordInput.text}}\n}",
       "bodyFormData": [
         {
           "key": "username",
@@ -47,7 +47,11 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": false,
     "name": "LoginQuery",
     "pageId": "Login",

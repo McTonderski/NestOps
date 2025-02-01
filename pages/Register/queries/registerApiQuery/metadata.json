@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "679d3cf45c869b2e517e6641_2ae2488b-92c1-4190-a9ef-fd0323a5a4be",
-  "id": "Login_RegisterQuery",
+  "gitSyncId": "679d3cf45c869b2e517e6641_ebe6ecb5-b4dc-4fd2-b8ef-530255d6d1ba",
+  "id": "Register_registerApiQuery",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,14 +11,14 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"username\": \"janedoe\",\n  \"password\": \"securepassword\",\n\t\"role\": \"admin\"\n}",
+      "body": "{\n\t\"username\": {{EmailInput.text}},\n\t\"password\": {{PasswordInput.text}},\n\t\"role\": \"user\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"
       },
       "headers": [],
-      "httpMethod": "POST",
+      "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -38,10 +38,14 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": false,
-    "name": "RegisterQuery",
-    "pageId": "Login",
+    "name": "registerApiQuery",
+    "pageId": "Register",
     "userSetOnLoad": false
   }
 }
