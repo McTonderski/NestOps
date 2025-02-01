@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 21,
+  "bottomRow": 27,
   "boxShadow": "none",
   "buttonColor": "transparent",
   "buttonVariant": "PRIMARY",
@@ -25,24 +25,24 @@
   "isLoading": false,
   "isVisible": true,
   "key": "ea7apjwric",
-  "leftColumn": 12,
-  "onClick": "{{navigateTo('Submit new order', {}, 'SAME_WINDOW')}}",
+  "leftColumn": 13,
+  "onClick": "{{navigateTo('My orders', {}, 'SAME_WINDOW')}}",
   "parentColumnSpace": 4.021484375,
-  "parentId": "95acg6i429",
+  "parentId": "w45vdtrygx",
   "parentRowSpace": 10,
   "placement": "START",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
-  "rightColumn": 63,
+  "rightColumn": 60,
   "searchTags": [
     "click",
     "submit"
   ],
-  "text": "New Work Request",
-  "topRow": 17,
+  "text": "My Work Orders",
+  "topRow": 23,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "o10wdyepg9",
-  "widgetName": "Button2Copy3"
+  "widgetId": "8hg0pd2qfy",
+  "widgetName": "Button2Copy1"
 }

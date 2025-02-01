@@ -1,9 +1,9 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 17,
   "boxShadow": "none",
-  "defaultImage": "https://s3.us-east-2.amazonaws.com/template.appsmith.com/group-4394.svg",
+  "defaultImage": "https://s3.us-east-2.amazonaws.com/template.appsmith.com/group-4405.svg",
   "displayName": "Image",
   "dynamicBindingPathList": [
     {
@@ -25,13 +25,13 @@
   "maxZoomLevel": 1,
   "objectFit": "contain",
   "parentColumnSpace": 4.021484375,
-  "parentId": "95acg6i429",
+  "parentId": "w45vdtrygx",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 13,
-  "topRow": 28,
+  "topRow": 13,
   "type": "IMAGE_WIDGET",
   "version": 1,
-  "widgetId": "ku4elwulcr",
-  "widgetName": "Image2Copy2"
+  "widgetId": "ben7ov3e0z",
+  "widgetName": "Image2Copy4Copy"
 }

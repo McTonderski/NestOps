@@ -1,0 +1,48 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 36,
+  "boxShadow": "none",
+  "buttonColor": "#324479",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "05htx61dr3",
+  "leftColumn": 13,
+  "minWidth": 120,
+  "mobileBottomRow": 36,
+  "mobileLeftColumn": 13,
+  "mobileRightColumn": 29,
+  "mobileTopRow": 32,
+  "needsErrorInfo": false,
+  "onClick": "{{removeValue('JWTToken').then(() => {\n  showAlert('Logged Out', 'info');\n  navigateTo('Login', {}, 'SAME_WINDOW');\n}).catch(() => {\n  showAlert('Logout failed', 'error');\n});}}",
+  "parentColumnSpace": 7.24462890625,
+  "parentId": "w45vdtrygx",
+  "parentRowSpace": 10,
+  "placement": "START",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 57,
+  "text": "Logout",
+  "topRow": 32,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "nm01zfv73t",
+  "widgetName": "Button3"
+}

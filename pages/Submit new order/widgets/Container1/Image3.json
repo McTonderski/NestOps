@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "0px",
-  "bottomRow": 75,
+  "bottomRow": 105,
   "boxShadow": "none",
   "defaultImage": "https://s3.us-east-2.amazonaws.com/template.appsmith.com/bdd.png",
   "displayName": "Image",
@@ -21,13 +21,13 @@
   "maxZoomLevel": 1,
   "objectFit": "contain",
   "parentColumnSpace": 4.021484375,
-  "parentId": "ae7ofn0j05",
+  "parentId": "ofdwnf5v2p",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 62,
-  "topRow": 53,
+  "rightColumn": 64,
+  "topRow": 83,
   "type": "IMAGE_WIDGET",
   "version": 1,
-  "widgetId": "e0p3sy62x8",
+  "widgetId": "i8iq1xyq5j",
   "widgetName": "Image3"
 }

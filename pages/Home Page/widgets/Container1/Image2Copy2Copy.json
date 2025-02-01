@@ -1,9 +1,9 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 22,
+  "bottomRow": 32,
   "boxShadow": "none",
-  "defaultImage": "https://s3.us-east-2.amazonaws.com/template.appsmith.com/listplus.svg",
+  "defaultImage": "https://s3.us-east-2.amazonaws.com/template.appsmith.com/group-4394.svg",
   "displayName": "Image",
   "dynamicBindingPathList": [
     {
@@ -21,17 +21,17 @@
   "isLoading": false,
   "isVisible": true,
   "key": "20b6vlid8h",
-  "leftColumn": 3,
+  "leftColumn": 4,
   "maxZoomLevel": 1,
   "objectFit": "contain",
   "parentColumnSpace": 4.021484375,
-  "parentId": "95acg6i429",
+  "parentId": "w45vdtrygx",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 12,
-  "topRow": 18,
+  "rightColumn": 13,
+  "topRow": 28,
   "type": "IMAGE_WIDGET",
   "version": 1,
-  "widgetId": "gasbkb77z4",
-  "widgetName": "Image2Copy3"
+  "widgetId": "q5i7ww7tfx",
+  "widgetName": "Image2Copy2Copy"
 }

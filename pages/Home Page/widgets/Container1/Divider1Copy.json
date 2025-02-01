@@ -8,14 +8,7 @@
   "capType": "nc",
   "displayName": "Divider",
   "dividerColor": "#5E6C9E",
-  "dynamicBindingPathList": [
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "accentColor"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicTriggerPathList": [],
   "hideCard": false,
   "iconSVG": "/static/media/icon.cbe8f608ca868e1eb44607e5fbd4a9e5.svg",
@@ -26,7 +19,7 @@
   "leftColumn": 0,
   "orientation": "horizontal",
   "parentColumnSpace": 3.7119140625,
-  "parentId": "95acg6i429",
+  "parentId": "w45vdtrygx",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 64,
@@ -38,6 +31,6 @@
   "topRow": 6,
   "type": "DIVIDER_WIDGET",
   "version": 1,
-  "widgetId": "hg7n6btqce",
-  "widgetName": "Divider1"
+  "widgetId": "krokba3h95",
+  "widgetName": "Divider1Copy"
 }

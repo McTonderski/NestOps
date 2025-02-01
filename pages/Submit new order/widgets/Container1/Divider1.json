@@ -19,7 +19,7 @@
   "leftColumn": 0,
   "orientation": "horizontal",
   "parentColumnSpace": 3.7119140625,
-  "parentId": "ae7ofn0j05",
+  "parentId": "ofdwnf5v2p",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 64,
@@ -31,6 +31,6 @@
   "topRow": 6,
   "type": "DIVIDER_WIDGET",
   "version": 1,
-  "widgetId": "s0kgb7ujxo",
+  "widgetId": "84grm40oc6",
   "widgetName": "Divider1"
 }
