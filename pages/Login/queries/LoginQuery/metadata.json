@@ -12,7 +12,16 @@
         }
       ],
       "body": "{\n\t\"username\": \"janedoe\",\n\t\"password\": \"securepassword\"\n}",
-      "bodyFormData": [],
+      "bodyFormData": [
+        {
+          "key": "username",
+          "value": "janedoe"
+        },
+        {
+          "key": "password",
+          "value": "securepassword"
+        }
+      ],
       "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "application/json"

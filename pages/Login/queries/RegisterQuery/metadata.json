@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"username\": \"janedoe\",\n  \"password\": \"securepassword\",\n  \"email\": \"jane@example.com\",\n  \"displayname\": \"Jane Doe\"\n}",
+      "body": "{\n  \"username\": \"janedoe\",\n  \"password\": \"securepassword\",\n\t\"role\": \"admin\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
