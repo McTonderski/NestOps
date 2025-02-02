@@ -1,0 +1,30 @@
+\contentsline {chapter}{\numberline {1}Wprowadzenie}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Cel pracy}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Zakres pracy}{4}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Czym jest HomeLab oraz analiza istniejących rozwiązań}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Definicja HomeLab oraz znaczenie}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Technologie wykorzystywane w homelabach}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Wirtualizacja i konteneryzacja}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Automatyzacja i zarządzanie konfiguracją}{7}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Monitoring i analiza}{7}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}Projekt Systemy Homelab}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Wymagania funkcjonalne i niefunkcjonalne}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Architektura systemu}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Technologie i narzędzia uzyte w systemie}{8}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Implementacja systemu}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Backend - API do zarządzania systemem}{9}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Struktura i kluczowe endpointy API}{9}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Obsługa uwierzytelniania i autoryzacji}{9}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Frontend - Interfejs uzytkownika}{9}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Projekt UI/UX}{9}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Implementacja aplikacji webowej}{9}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Automatyzacja Konfiguracji i wdrozenie}{9}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Skrypty do automatycznego deploymentu}{9}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Integracja z narzędziami CI/CD}{9}{subsection.4.3.2}%
+\contentsline {chapter}{\numberline {5}Testowanie i analiza systemu}{10}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Testy jednostkowe i integracyjne}{10}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Testy wydajnościowe i bezpieczeństwa}{10}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Opinie uzytkownikow i ewaluacja systemu}{10}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Podsumowanie i wnioski}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Osiągnięcia i rezultaty pracy}{11}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Mozliwości dalszego rozwoju}{11}{section.6.2}%
