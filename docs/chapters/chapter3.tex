@@ -2,6 +2,84 @@
 
 \section{Wymagania funkcjonalne i niefunkcjonalne}
 
+\subsection{Wymagania funkcjonalne}
+
+\begin{enumerate}
+    \item Zarządzanie infrastrukturą
+    \item Panel administracyjny
+    \item Baza danych
+    \item Bezpieczny dostęp zdalny
+    \item Automatyzacja wdrozeń
+    \item Obsługa domeny
+    \item Monitorowanie zasobów
+    \item Wsparcie dla rozszerzeń
+    \item Łatwe wdrazanie aplikacji
+    \item Bezpieczne uwierzytelnianie i autoamtyzacja
+\end{enumerate}
+
+\subsection{Wymagania niefunkcjonalne}
+
+\begin{enumerate}
+    \item Niski pobór energii - system wdrazany na Raspberry Pi 5, co zapeni efektywność energetyczną.
+    \item Wysoka dostępność - redundancja i odporność na awarię dzięki Docker oraz Integracji z VPN.
+    \item Łatwość w utrzymaniu - system powinien umozliwiac łatwe aktualizację i rekonfigurację w razie potrzeby ręcznej interwencji.
+    \item Skalowalność - mozliwość rozszerzenia o nowe komponenty i usługi.
+    \item Bezpieczeństwo - szyfrowanie komunikacji oraz kontrola dostępu do zasobów.
+    \item Modularność - podział systemu na niezalezne komponenty działające w kontenerach Docker.
+    \item Integracja z open-source - Wspracie dla narzędzi i trchnologii dostępnych na licencji open-source.
+    \item Minimalizacja kosztów - niskie koszty sprzętowe i utrzymanie dzieki Raspberry Pi i rozwiązaniom chmurowym typu DuckDNS.
+    \item Wydajność - optymalizacja aplikacji pod Raspberry Pi, aby zapenić płynne działąnie 
+    \item Łatwość wdrozenia - uproszczona konfiguracja pozwalająca na szybkie uruchomienie systemu.
+\end{enumerate}
+
 \section{Architektura systemu}
+System HomeLab składa się z kilku kluczowych komponentów:
+
+\subsection{Backend (FastAPI + MongoDB)}
+
+\subsection{Frontend (AppSmith)}
+
+\subsection{Warstwa sieciowa}
+
+\subsection{Środowisko kontenerowe}
+
+\subsection{Automatyzacja CI/CD}
+
+\subsection{Urządzenie docelowe}
+
+\begin{itemize}
+    \item Raspberry Pi 5
+\end{itemize}
+
+
 
 \section{Technologie i narzędzia uzyte w systemie}
+
+System HomeLab wykorzystuje następujące technologie:
+\subsection{Backend}
+\begin{itemize}
+    \item FastAPI - szybki i nowoczesny framework do tworzenia API w pythonie
+    \item MongoDB - baza danych NoSQL przechowująca konfigurację i dane uzytkowników
+\end{itemize}
+\subsection{Frontend}
+\begin{itemize}
+    \item AppSmith - niskokodowe narzędzia do budowy interfejsu uzytkownika.
+    \item RestAPI - wykorzystywane do komunikacji między frontendem a backendem.
+\end{itemize}
+\subsection{Warstwa Sieciowa}
+\begin{itemize}
+    \item Tailscale - VPN do bezpiecznego zapewnienia zdalnego dostępu do systemu, bez konieczności posiadania stałego adresu IP.
+    \item DuckDNS - dynamiczny system zarządzania domeną umozliwiający łatwy dostęp do systemi.
+\end{itemize}
+\subsection{Środowisko uruchomieniowe}
+\begin{itemize}
+    \item Docker - uzywany do konteneryzacji aplikacji i zarządzania zaleznościami.
+    \item Raspberry Pi 5 - host systemu zapewniający energooszczędność i niski koszt.
+\end{itemize}
+\subsection{Automatyzacjia CI/CD}
+\begin{itemize}
+    \item GitHub Actions - narzędzie do automatyzacji wdrozeń i testowania kodu.
+    \item Pipeline CI/CD - automatyczne testowanie, budowanie i wdrazanie aplikacji
+\end{itemize}
+
+Dzięki zastosowaniu powyzszych technologii system Homelab będzie nowoczesnym, skalowalnym i energooszczędnym rozwiązaniem dla uzytkowników domowych.

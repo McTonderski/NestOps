@@ -13,7 +13,7 @@ Homelaby znajdują zastosowanie w wielu obszarach, w tym:
 \end{itemize}
 
 \section{Technologie wykorzystywane w homelabach}
-Homelab moe składać się z róznych komponentów, od dedykowanych serwerów fizycznych po rozwiązania chmurowe i kontenerwowe. Kluczowe technologie wykorzystywane w homelabach obejmują:
+Homelab moze składać się z róznych komponentów, od dedykowanych serwerów fizycznych po rozwiązania chmurowe i kontenerwowe. Kluczowe technologie wykorzystywane w homelabach obejmują:
 
 \subsection{Wirtualizacja i konteneryzacja}
 \begin{itemize}
@@ -34,3 +34,109 @@ Homelab moe składać się z róznych komponentów, od dedykowanych serwerów fi
     \item Prometheus i grafana - rozwiązanai do monitorowania wydajności i wizualizacji danych.
     \item Zabbix - platforma do monitorowania infrastruktury IT.
 \end{itemize}
+
+\section{Analiza istniejących systemtów do zarządzania homelabem}
+\subsection{Przegląd dostępnych rozwiązań}
+Na rynku istnieje kilka systemów umozliwiajacych zarzadzanie homelabem. Do najpopularniejszych nalezą:
+\begin{itemize}
+    \item Proxmox VE - rozbudowany, open-source rozwiązanie do zarządzania maszynami wirtualnymi i kontenerami, oferujące intrgeację z Ceph i wysoką dostępność.
+    \item Unraid - popularne rozwiązanie NAS z obsługą wirtualizacji i kontenerów, cenione za łatwość obsługi ale ograniczone zastosowanie korporacyjne.
+    \item OpenStack - potęzna platforma chmurowa, która moze być uzywana do zarządzania homelabem, ale jej skomplikowana konfiguracja sprawia, ze nie jest przyjazna dla poczatkujacych uzytkowników.
+    \item TrueNAS - rozbudowane oprogramowanie do zarządzania przestrzenią dyskową, które umozliwa tworzenie prywatnych chmur danych
+    \item Docker + Kubernetes - stosowane w bardziej zaawansowanych wdrozeniach do zarzadzania kontenerami, ale wymagające większej wiedzy technicznej.
+\end{itemize}
+\subsection{Zalety i ograniczenia konkurencyjnych systemów}
+
+\subsubsection{Proxmox VE}
+\begin{minipage}{0.45\textwidth}
+    Zalety
+    \begin{itemize}
+        \item Darmowa wersja open-source.
+        \item Wsparcie dla maszyn wirtualnych (KVM) i kontenerów (LXC).
+        \item Mozliwość tworzenia klastrów wysokiej dostępności.
+    \end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.45\textwidth}
+    Wady
+    \begin{itemize}
+        \item Brak pełnej automatyzacji wdrozeń.
+        \item Stosunkowo wysoki próg wejścia dla początkujących uzytkowników.
+    \end{itemize}
+\end{minipage}
+
+\subsubsection{Unraid}
+\begin{minipage}{0.45\textwidth}
+    Zalety
+    \begin{itemize}
+        \item Intuicyjny interfejs uzytkownika.
+        \item Łatwa obsługa pamięci masowej i kontrolerów.
+    \end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.45\textwidth}
+    Wady
+    \begin{itemize}
+        \item Model licencyjny oparty na opłacie jednorazowej.
+        \item Ograniczona integracja z systemami chmurowymi.
+    \end{itemize}
+\end{minipage}
+
+\subsubsection{OpenStack}
+\begin{minipage}{0.45\textwidth}
+    Zalety
+    \begin{itemize}
+        \item Zaawansowane funkcje chmurowe.
+        \item Skalowalność i modularność.
+    \end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.45\textwidth}
+    Wady
+    \begin{itemize}
+        \item Bardzo wysoka trudność wdrozenia.
+        \item Wymaga duzej ilości zasobów sprzętowych.
+    \end{itemize}
+\end{minipage}
+
+\subsubsection{TrueNAS}
+\begin{minipage}{0.45\textwidth}
+    Zalety
+    \begin{itemize}
+        \item Silne wsparcie dla przechowywania danych.
+        \item Wbudowana replikacja i ochrona RAID
+    \end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.45\textwidth}
+    Wady
+    \begin{itemize}
+        \item Skupione głównie na funkcjach NAS.
+        \item Brak natywnego wsparcia dla maszyn wirtualnych.
+    \end{itemize}
+\end{minipage}
+
+
+\subsubsection{Docker + Kubernetes}
+\begin{minipage}{0.45\textwidth}
+    Zalety
+    \begin{itemize}
+        \item Elastyczność w zarządzaniu aplikacjami kontenerowymi.
+        \item Łatwe skalowanie infrastruktury.
+    \end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.45\textwidth}
+    Wady
+    \begin{itemize}
+        \item Wymaga duzej wiedzy technicznej.
+        \item Brak wsparcia dla maszyn wirtualnych.
+    \end{itemize}
+\end{minipage}
+
+
+\subsection{Identyfikacja luki technologicznej}
+Analiza powyzszego porównania dostępnych systemów pokazuję, ze zadne z obecnyhc rozwiązań nie zapewnia jednocześnie:
+\begin{itemize}
+    \item Pełnej integracji zarządzanai maszynami wirtualnymi, kontenerami i przestrzenią dyskową w jednym ekosystemie.
+    \item Prostego i intuicyjnego interfejsu dla uzytkownikow niebędących ekspertami w zarządzaniu infrastrukturą IT.
+    \item Natychmiastowej automatyzacji wdrazania, bez konieczności skomplikowanej konfiguracji narzędzi DevOps.
+    \item Wbudowanej funkcjonalności związanej z bezpieczeństwem i prywatnością, eliminującej konieczność korzystania z komercyjnych rozwiązań chmurowych.
+\end{itemize}
+
+Proponowany system HomeLab ma nacelu uzupełnienie tej luki poprzez stworzenie intuicyjnego narzędzia do zarządzania domową infrastrukturą IT, które zapewni łatowść obsługi, pełną automatyzację oraz zwiększoną przywatność uzytkowników.

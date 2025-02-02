@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.16)  2 FEB 2025 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.16)  2 FEB 2025 19:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -560,7 +560,7 @@ Package biblatex Info: ... file 'main.bbl' found.
 Package biblatex Info: Reference section=0 on input line 17.
 Package biblatex Info: Reference segment=0 on input line 17.
  (./chapters/stronatytulowa.tex
-<images/logo.jpg, id=124, 911.405pt x 224.84pt>
+<images/logo.jpg, id=192, 911.405pt x 224.84pt>
 File: images/logo.jpg Graphic file (type jpg)
 <use images/logo.jpg>
 Package pdftex.def Info: images/logo.jpg  used on input line 5.
@@ -613,21 +613,76 @@ Overfull \hbox (2.60088pt too wide) in paragraph at lines 29--30
 []\T1/cmr/m/n/12 Ansible, Ter-raform, Pup-pet, Chef - narz¦dzia do au-tomatyza-cji wdraza-nia i zarz¡dza-
  []
 
-) (./chapters/chapter3.tex [7]
-Chapter 3.
-) (./chapters/chapter4.tex [8
 
-]
+Overfull \hbox (14.6018pt too wide) in paragraph at lines 38--38
+|[]\T1/cmr/bx/n/17.28 Analiza ist-niej¡-cych sys-temtów do zarz¡dza-nia home-
+ []
+
+
+Overfull \hbox (16.69745pt too wide) in paragraph at lines 46--47
+[]\T1/cmr/m/n/12 Docker + Ku-ber-netes - stosowane w bardziej za-awan-sowanych wdrozeni-ach do zarzadza-
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+[]\T1/cmr/m/n/12 Mozliwo±¢ tworzenia klas-trów
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+[]\T1/cmr/m/n/12 Brak peªnej au-tomatyza-cji
+ []
+
+
+Underfull \hbox (badness 7631) in paragraph at lines 79--80
+[]\T1/cmr/m/n/12 Ograniczona in-te-gracja z sys-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+[]\T1/cmr/m/n/12 Bardzo wysoka trud-no±¢
+ []
+
+
+Underfull \hbox (badness 6775) in paragraph at lines 95--96
+[]\T1/cmr/m/n/12 Wymaga duzej ilo±ci za-sobów
+ []
+
+
+Underfull \hbox (badness 2503) in paragraph at lines 110--111
+[]\T1/cmr/m/n/12 Skupione gªównie na funkc-jach
+ []
+
+
+Underfull \hbox (badness 6675) in paragraph at lines 111--112
+[]\T1/cmr/m/n/12 Brak naty-wnego ws-par-cia dla
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 120--121
+[]\T1/cmr/m/n/12 Elastyczno±¢ w zarz¡dza-niu ap-
+ []
+
+[8]
+Overfull \hbox (18.26782pt too wide) in paragraph at lines 137--138
+[]\T1/cmr/m/n/12 Prostego i in-tu-icyjnego in-ter-fe-jsu dla uzytkown-ikow nieb¦d¡-cych eksper-tami w zarz¡dza-
+ []
+
+) (./chapters/chapter3.tex [9]
+Chapter 3.
+[10
+
+] [11]) (./chapters/chapter4.tex [12]
 Chapter 4.
-) (./chapters/chapter5.tex [9
+) (./chapters/chapter5.tex [13
 
 ]
 Chapter 5.
-) (./chapters/chapter6.tex [10
+) (./chapters/chapter6.tex [14
 
 ]
 Chapter 6.
-) [11
+) [15
 
 ]
 
@@ -639,24 +694,24 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C783F04459704F165890151743B10FA3;6390.
+(rerunfilecheck)             Checksum: 17BF129C352A5E228167177AD4D95B7E;9605.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16949 strings out of 474116
- 295010 string characters out of 5743682
+ 17013 strings out of 474116
+ 295901 string characters out of 5743682
  1938187 words of memory out of 5000000
- 39076 multiletter control sequences out of 15000+600000
+ 39099 multiletter control sequences out of 15000+600000
  568778 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,6n,81p,875b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (12 pages, 185364 bytes).
+Output written on main.pdf (16 pages, 198674 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 230 compressed objects within 3 object streams
- 43 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 355 compressed objects within 4 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 382 words of extra memory for PDF output out of 10000 (max. 10000000)
 
