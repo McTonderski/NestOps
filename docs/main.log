@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.16)  2 FEB 2025 19:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.16)  2 FEB 2025 19:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -670,6 +670,16 @@ Overfull \hbox (18.26782pt too wide) in paragraph at lines 137--138
 
 ) (./chapters/chapter3.tex [9]
 Chapter 3.
+
+Overfull \hbox (16.3808pt too wide) in paragraph at lines 11--12
+[]\T1/cmr/bx/n/12 Bezpieczny dost¦p zdalny \T1/cmr/m/n/12 - in-te-gracja z Tailscale umo-zli-wa-ia-jca dost¦p z dowolonego
+ []
+
+
+Overfull \hbox (9.23824pt too wide) in paragraph at lines 13--14
+[]\T1/cmr/bx/n/12 Obsªuga domeny \T1/cmr/m/n/12 - in-te-gracja z DuckDNS w celu dy-nam-icznego zarz¡dza-nia domen¡. 
+ []
+
 [10
 
 ] [11]) (./chapters/chapter4.tex [12]
@@ -708,7 +718,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  75i,6n,81p,875b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (16 pages, 198674 bytes).
+Output written on main.pdf (16 pages, 201573 bytes).
 PDF statistics:
  393 PDF objects out of 1000 (max. 8388607)
  355 compressed objects within 4 object streams

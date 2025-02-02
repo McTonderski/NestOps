@@ -5,31 +5,31 @@
 \subsection{Wymagania funkcjonalne}
 
 \begin{enumerate}
-    \item Zarządzanie infrastrukturą
-    \item Panel administracyjny
-    \item Baza danych
-    \item Bezpieczny dostęp zdalny
-    \item Automatyzacja wdrozeń
-    \item Obsługa domeny
-    \item Monitorowanie zasobów
-    \item Wsparcie dla rozszerzeń
-    \item Łatwe wdrazanie aplikacji
-    \item Bezpieczne uwierzytelnianie i autoamtyzacja
+    \item \textbf{Zarządzanie infrastrukturą} - mozliwość konfiguracji i zarządzania maszynami wierualnymi oraz kontenerami Docker.
+    \item \textbf{Panel administracyjny} - intuicyjny interfejs uzytkownika stworzony przy pomocy systemu AppSmith, do zarządzania zasobami systemu.
+    \item \textbf{Baza danych} - przechowywanie informacji o konfiguracji systemu i uzytkownikach w MongoDB.
+    \item \textbf{Bezpieczny dostęp zdalny} - integracja z Tailscale umozliwaiajca dostęp z dowolonego miejsca na ziemii.
+    \item \textbf{Automatyzacja wdrozeń} - wsparcia dla CI/CD za pomocą GitHub Pipelines.
+    \item \textbf{Obsługa domeny} - integracja z DuckDNS w celu dynamicznego zarządzania domeną.
+    \item \textbf{Monitorowanie zasobów} - mechanizmy zbierania infromacji o wykorzystaniu CPU, pamięci RAM oraz przestrzeni dyskowej.
+    \item \textbf{Wsparcie dla rozszerzeń} - mozliwość dodawania nowych funkcji poprzez kontenery Dockera.
+    \item \textbf{Łatwe wdrazanie aplikacji} - opcja uruchamiania własnych usług w kontenerach bez konieczności zaawansowanej konfiguracji.
+    \item \textbf{Bezpieczne uwierzytelnianie i automatyzacja} - mechanizm logowania oparty na OAuth2 i zarządzanie rolami uzytkowników.
 \end{enumerate}
 
 \subsection{Wymagania niefunkcjonalne}
 
 \begin{enumerate}
-    \item Niski pobór energii - system wdrazany na Raspberry Pi 5, co zapeni efektywność energetyczną.
-    \item Wysoka dostępność - redundancja i odporność na awarię dzięki Docker oraz Integracji z VPN.
-    \item Łatwość w utrzymaniu - system powinien umozliwiac łatwe aktualizację i rekonfigurację w razie potrzeby ręcznej interwencji.
-    \item Skalowalność - mozliwość rozszerzenia o nowe komponenty i usługi.
-    \item Bezpieczeństwo - szyfrowanie komunikacji oraz kontrola dostępu do zasobów.
-    \item Modularność - podział systemu na niezalezne komponenty działające w kontenerach Docker.
-    \item Integracja z open-source - Wspracie dla narzędzi i trchnologii dostępnych na licencji open-source.
-    \item Minimalizacja kosztów - niskie koszty sprzętowe i utrzymanie dzieki Raspberry Pi i rozwiązaniom chmurowym typu DuckDNS.
-    \item Wydajność - optymalizacja aplikacji pod Raspberry Pi, aby zapenić płynne działąnie 
-    \item Łatwość wdrozenia - uproszczona konfiguracja pozwalająca na szybkie uruchomienie systemu.
+    \item \textbf{Niski pobór energii} - system wdrazany na Raspberry Pi 5, co zapeni efektywność energetyczną.
+    \item \textbf{Wysoka dostępność} - redundancja i odporność na awarię dzięki Docker oraz Integracji z VPN.
+    \item \textbf{Łatwość w utrzymaniu} - system powinien umozliwiac łatwe aktualizację i rekonfigurację w razie potrzeby ręcznej interwencji.
+    \item \textbf{Skalowalność} - mozliwość rozszerzenia o nowe komponenty i usługi.
+    \item \textbf{Bezpieczeństwo} - szyfrowanie komunikacji oraz kontrola dostępu do zasobów.
+    \item \textbf{Modularność} - podział systemu na niezalezne komponenty działające w kontenerach Docker.
+    \item \textbf{Integracja z open-source} - Wspracie dla narzędzi i trchnologii dostępnych na licencji open-source.
+    \item \textbf{Minimalizacja kosztów} - niskie koszty sprzętowe i utrzymanie dzieki Raspberry Pi i rozwiązaniom chmurowym typu DuckDNS.
+    \item \textbf{Wydajność} - optymalizacja aplikacji pod Raspberry Pi, aby zapenić płynne działąnie 
+    \item \textbf{Łatwość wdrozenia} - uproszczona konfiguracja pozwalająca na szybkie uruchomienie systemu.
 \end{enumerate}
 
 \section{Architektura systemu}

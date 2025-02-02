@@ -27,8 +27,8 @@
 \contentsline {subsection}{\numberline {3.2.4}Środowisko kontenerowe}{11}{subsection.3.2.4}%
 \contentsline {subsection}{\numberline {3.2.5}Automatyzacja CI/CD}{11}{subsection.3.2.5}%
 \contentsline {subsection}{\numberline {3.2.6}Urządzenie docelowe}{11}{subsection.3.2.6}%
-\contentsline {section}{\numberline {3.3}Technologie i narzędzia uzyte w systemie}{11}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Backend}{11}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.3}Technologie i narzędzia uzyte w systemie}{12}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Backend}{12}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Frontend}{12}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Warstwa Sieciowa}{12}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Środowisko uruchomieniowe}{12}{subsection.3.3.4}%
