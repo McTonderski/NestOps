@@ -17,6 +17,8 @@
     \item \textbf{Bezpieczne uwierzytelnianie i automatyzacja} - mechanizm logowania oparty na OAuth2 i zarządzanie rolami uzytkowników.
 \end{enumerate}
 
+\pagebreak
+
 \subsection{Wymagania niefunkcjonalne}
 
 \begin{enumerate}
@@ -32,25 +34,51 @@
     \item \textbf{Łatwość wdrozenia} - uproszczona konfiguracja pozwalająca na szybkie uruchomienie systemu.
 \end{enumerate}
 
+\pagebreak
+
 \section{Architektura systemu}
 System HomeLab składa się z kilku kluczowych komponentów:
 
 \subsection{Backend (FastAPI + MongoDB)}
+\begin{itemize}
+    \item FastAPI \cite{FastAPI} odpowiada za obsługę logiki biznesowej i API Backendu.
+    \item MongoDB \cite{MongoDB} przechowuje dane uzytkowników, konfigurację systemowe i rejestr operacji.
+\end{itemize}
 
 \subsection{Frontend (AppSmith)}
+\begin{itemize}
+    \item niskokodowa platforma pozwalająca na łatwe budowanie interfejsu uzytkownika.
+    \item Integracja z backendem poprzez REST API
+\end{itemize}
 
 \subsection{Warstwa sieciowa}
+\begin{itemize}
+    \item Połączenia umozliwione i zabezpieczone poprzez Tailscale (VPN).
+    \item DuckDNS zapewniający mozliwość dostępu do systemu za pomocą domeny, zamiast adresu IP.
+\end{itemize}
 
 \subsection{Środowisko kontenerowe}
+\begin{itemize}
+    \item Docker wykorzystywany do zarządzania usługami systemu.
+    \item Mozliwość łatwego wdrazania i skalowania aplikacji poprzez kontenery.
+\end{itemize}
 
 \subsection{Automatyzacja CI/CD}
+\begin{itemize}
+    \item GitHub Actions zarządza automatyzacją wdrozeń i aktualizacji systemu
+    \item Kazda zmiana w kodzie uruchamia testy oraz wdrozenie nowych wersji aplikacji.
+\end{itemize}
 
 \subsection{Urządzenie docelowe}
 
-\begin{itemize}
-    \item Raspberry Pi 5
-\end{itemize}
+Raspberry Pi 5 jako główny host systemu, zapewniający niskie zuzycie energii i optymalizację kosztów.
 
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{./chapters/mermeid/schemat_architektury.png}
+        \caption{Schemat Architektury}
+    \end{center}
+\end{figure}
 
 
 \section{Technologie i narzędzia uzyte w systemie}
@@ -76,7 +104,7 @@ System HomeLab wykorzystuje następujące technologie:
     \item Docker - uzywany do konteneryzacji aplikacji i zarządzania zaleznościami.
     \item Raspberry Pi 5 - host systemu zapewniający energooszczędność i niski koszt.
 \end{itemize}
-\subsection{Automatyzacjia CI/CD}
+\subsection{Automatyzacja CI/CD}
 \begin{itemize}
     \item GitHub Actions - narzędzie do automatyzacji wdrozeń i testowania kodu.
     \item Pipeline CI/CD - automatyczne testowanie, budowanie i wdrazanie aplikacji
