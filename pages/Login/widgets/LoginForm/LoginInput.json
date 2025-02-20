@@ -12,6 +12,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "validation"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -20,7 +23,7 @@
   "inputType": "TEXT",
   "isDisabled": false,
   "isLoading": false,
-  "isRequired": false,
+  "isRequired": true,
   "isVisible": true,
   "key": "yfvr62ea78",
   "label": "Login",
@@ -51,6 +54,7 @@
   "showStepArrows": false,
   "topRow": 10,
   "type": "INPUT_WIDGET_V2",
+  "validation": "{{LoginInput.text.length > 0}}",
   "version": 2,
   "widgetId": "xozvh8f5j9",
   "widgetName": "LoginInput"
