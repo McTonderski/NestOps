@@ -14,8 +14,8 @@
       },
       "headers": [
         {
-          "key": "Authentication",
-          "value": "BEARERaaa {{appsmith.store.JWT_TOKEN}}"
+          "key": "Authorization",
+          "value": "BEARER {{appsmith.store.JWT_TOKEN}}"
         }
       ],
       "httpMethod": "GET",
