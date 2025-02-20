@@ -4,7 +4,7 @@ export default {
 			LoginQuery.run()
 				.then((response) => {  // Run after the query is successful
 				if (response && response.access_token) {
-					storeValue("JWT_TOKEN", response.access_token, persist=True); // Save the token
+					storeValue("JWT_TOKEN", response.access_token, true); // Save the token
 					showAlert("Login Successful", "success");
 					navigateTo("Home Page")
 				} else {
@@ -12,7 +12,7 @@ export default {
 				}
 			})
 				.catch((e) => showAlert("Unsuccessful login" + e, "error")); // Run if the query encounters any errors
-			return 1;
+			return true;
 		}else {
 			showAlert("Please provide valid login and password values")
 		}
