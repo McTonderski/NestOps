@@ -12,11 +12,16 @@
       "formData": {
         "apiContentType": "none"
       },
-      "headers": [],
+      "headers": [
+        {
+          "key": "Authentication",
+          "value": "BEARER: {{JWT_TOKEN}}"
+        }
+      ],
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/instance/details",
+      "path": "/instance/details",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -32,7 +37,11 @@
       "name": "NestOpsSource",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "headers[0].value"
+      }
+    ],
     "executeOnLoad": false,
     "name": "getInstanceDetails",
     "pageId": "Home Page",
