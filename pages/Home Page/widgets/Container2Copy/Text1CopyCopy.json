@@ -40,7 +40,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "{{getWorkOrders.data.filter((item) => item.completed == \"No\" || item.completed == \"\").length}}",
+  "text": "{{appsmith.store.CPU_USAGE}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 10,

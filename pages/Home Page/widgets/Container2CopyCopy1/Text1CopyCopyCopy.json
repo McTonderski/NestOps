@@ -28,6 +28,8 @@
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
+  "originalBottomRow": 14,
+  "originalTopRow": 10,
   "overflow": "NONE",
   "parentColumnSpace": 4.3310546875,
   "parentId": "ehbbjroqmw",
@@ -40,7 +42,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "{{getWorkOrders.data.filter((item) => item.completed == \"Yes\").length}}",
+  "text": "{{appsmith.store.MEMORY_USAGE}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 10,

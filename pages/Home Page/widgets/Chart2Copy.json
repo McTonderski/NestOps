@@ -182,6 +182,8 @@
   "key": "atkbejtqfb",
   "labelOrientation": "auto",
   "leftColumn": 37,
+  "originalBottomRow": 51,
+  "originalTopRow": 25,
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
