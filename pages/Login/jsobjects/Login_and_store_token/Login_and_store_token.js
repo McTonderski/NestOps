@@ -12,7 +12,7 @@ export default {
 				}
 			})
 				.catch((e) => showAlert("Unsuccessful login" + e, "error")); // Run if the query encounters any errors
-			return true;
+			return 1;
 		}else {
 			showAlert("Please provide valid login and password values")
 		}
