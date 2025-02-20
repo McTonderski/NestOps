@@ -11,7 +11,7 @@ export default {
 					showAlert("Login failed: No token received", "error");
 				}
 			})
-				.catch(() => showAlert("Unsuccessful login", "error")); // Run if the query encounters any errors
+				.catch((e) => showAlert("Unsuccessful login" + e, "error")); // Run if the query encounters any errors
 			return true;
 		}else {
 			showAlert("Please provide valid login and password values")
