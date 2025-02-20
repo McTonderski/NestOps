@@ -1,6 +1,7 @@
 export default {
 	async queryAutoRefresh() {
 		try {
+			showAlert("{{JWT_TOKEN}}","success")
 			const response = await getInstanceDetails.run();  // Run API request
 
 			if (response) {
