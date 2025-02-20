@@ -37,7 +37,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "In progress",
+  "text": "CPU Utilisation",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 6,

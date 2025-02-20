@@ -32,6 +32,8 @@
   "mobileTopRow": 33,
   "needsErrorInfo": false,
   "onClick": "{{navigateTo('Register', {}, 'SAME_WINDOW');}}",
+  "originalBottomRow": 37,
+  "originalTopRow": 33,
   "parentId": "noq3r3h3aw",
   "placement": "CENTER",
   "recaptchaType": "V3",

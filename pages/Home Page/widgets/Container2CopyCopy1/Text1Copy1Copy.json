@@ -37,7 +37,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "Completed",
+  "text": "Memory Utilisation",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 6,
