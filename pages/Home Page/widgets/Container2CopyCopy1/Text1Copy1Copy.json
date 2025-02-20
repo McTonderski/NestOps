@@ -11,7 +11,7 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT_WITH_LIMITS",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1.25rem",
@@ -23,8 +23,10 @@
   "isVisible": true,
   "key": "8ao8442ejy",
   "leftColumn": 0,
-  "maxDynamicHeight": 9000,
+  "maxDynamicHeight": 6,
   "minDynamicHeight": 4,
+  "originalBottomRow": 10,
+  "originalTopRow": 6,
   "overflow": "NONE",
   "parentColumnSpace": 4.3310546875,
   "parentId": "ehbbjroqmw",
@@ -36,6 +38,7 @@
     "paragraph",
     "label"
   ],
+  "shouldScrollContents": true,
   "shouldTruncate": false,
   "text": "Memory Utilisation",
   "textAlign": "LEFT",
