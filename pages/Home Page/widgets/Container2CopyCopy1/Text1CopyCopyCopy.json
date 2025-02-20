@@ -42,7 +42,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "{{appsmith.store.MEMORY_USAGE}}",
+  "text": "{{appsmith.store.MEMORY_USAGE}} %",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 10,

@@ -40,7 +40,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "{{appsmith.store.CPU_USAGE}}",
+  "text": "{{appsmith.store.CPU_USAGE}} %",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 10,
