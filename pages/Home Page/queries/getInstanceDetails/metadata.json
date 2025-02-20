@@ -45,6 +45,6 @@
     "executeOnLoad": false,
     "name": "getInstanceDetails",
     "pageId": "Home Page",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }
