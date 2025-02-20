@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 17,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "maciejtonderski.mt@gmail.coma",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -33,6 +33,7 @@
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 8,
+  "maxChars": "120",
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
