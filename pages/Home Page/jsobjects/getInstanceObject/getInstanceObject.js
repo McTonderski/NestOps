@@ -1,6 +1,9 @@
 export default {
 	async queryAutoRefresh() {
 		try {
+			if(appsmith.store.JWTToken == ""){
+				navigateTo("Login Page")
+			}
 			showAlert(appsmith.store.JWTToken, "success")
 			const response = await getInstanceDetails.run();  // Run API request
 
