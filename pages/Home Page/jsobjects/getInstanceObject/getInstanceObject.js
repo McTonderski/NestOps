@@ -24,7 +24,8 @@ export default {
 					}
 				});
 				const servicesCount = containerSummary.reduce((sum, item) => sum + item.y, 0);
-
+				console.log(containerSummary);
+				console.log("Total Services Count:", servicesCount);
 				// Store values in Appsmith
 				storeValue("CPU_USAGE", cpuUsage);
 				storeValue("MEMORY_USAGE", memoryUsage);
