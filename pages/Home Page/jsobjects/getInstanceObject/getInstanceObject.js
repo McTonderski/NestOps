@@ -17,7 +17,6 @@ export default {
 				storeValue("SERVICE_COUNT", servicesCount);
 				storeValue("SERVICE_LIST", runningServices);
 
-				showAlert("System stats updated successfully", "success");
 			} else {
 				showAlert("Error: Invalid response received", "error");
 			}
