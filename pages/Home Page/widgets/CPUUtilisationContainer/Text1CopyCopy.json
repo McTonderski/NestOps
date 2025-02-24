@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 15,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -14,7 +14,7 @@
       "key": "text"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1.875rem",
@@ -28,9 +28,11 @@
   "leftColumn": 9,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
+  "originalBottomRow": 11,
+  "originalTopRow": 7,
   "overflow": "NONE",
   "parentColumnSpace": 4.3310546875,
-  "parentId": "4vsjl0ypdh",
+  "parentId": "3pghczwpij",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 56,
@@ -39,13 +41,14 @@
     "paragraph",
     "label"
   ],
+  "shouldScrollContents": true,
   "shouldTruncate": false,
-  "text": "{{appsmith.store.SERVICE_COUNT}}",
+  "text": "{{appsmith.store.CPU_USAGE}} %",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 7,
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "8cw9z8m97k",
-  "widgetName": "Text1Copy2"
+  "widgetId": "kywjbzewbw",
+  "widgetName": "Text1CopyCopy"
 }

@@ -32,15 +32,15 @@
       "leftColumn": 0,
       "minHeight": 400,
       "parentColumnSpace": 1,
-      "parentId": "l0svqodkih",
+      "parentId": "797dbfeg9r",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "rightColumn": 475.5,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "4vsjl0ypdh",
-      "widgetName": "Canvas2Copy1"
+      "widgetId": "ehbbjroqmw",
+      "widgetName": "Canvas2CopyCopy"
     }
   ],
   "containerStyle": "card",
@@ -55,14 +55,16 @@
   "isLoading": false,
   "isVisible": true,
   "key": "i2gkdaesc8",
-  "leftColumn": 13,
+  "leftColumn": 45,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
+  "originalBottomRow": 24,
+  "originalTopRow": 7,
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 28,
+  "rightColumn": 61,
   "searchTags": [
     "div",
     "parent",
@@ -71,6 +73,6 @@
   "topRow": 7,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "l0svqodkih",
-  "widgetName": "Container2Copy1"
+  "widgetId": "797dbfeg9r",
+  "widgetName": "MemoryUtilisationContainer"
 }
