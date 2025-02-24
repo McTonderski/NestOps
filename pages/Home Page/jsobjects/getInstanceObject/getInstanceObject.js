@@ -15,7 +15,7 @@ export default {
 				];
 
 				response.running_docker_containers.forEach(container => {
-					console.log((container.Status))
+					console.log(container.Status);
 					if (container.Status === "running") {
 						containerSummary.find(item => item.x === "Running").y++;
 					} else if (container.Status === "exited") {
