@@ -15,7 +15,6 @@ export default {
 				];
 
 				response.running_docker_containers.forEach(container => {
-					console.log(container.status);
 					if (container.status === "running") {
 						containerSummary.find(item => item.x === "Running").y++;
 					} else if (container.status === "exited") {
@@ -25,8 +24,6 @@ export default {
 					}
 				});
 				const servicesCount = containerSummary.reduce((sum, item) => sum + item.y, 0);
-				console.log(containerSummary);
-				console.log("Total Services Count:", servicesCount);
 				// Store values in Appsmith
 				storeValue("CPU_USAGE", cpuUsage);
 				storeValue("MEMORY_USAGE", memoryUsage);
