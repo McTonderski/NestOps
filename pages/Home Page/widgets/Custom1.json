@@ -1,0 +1,66 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 85,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultModel": "{\n  \"tips\": [\n    \"Pass data to this widget in the default model field\",\n    \"Access data in the javascript file using the appsmith.model variable\",\n    \"Create events in the widget and trigger them in the javascript file using appsmith.triggerEvent('eventName')\",\n    \"Access data in CSS as var(--appsmith-model-{property-name})\"\n  ]\n}",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onResetClick"
+    }
+  ],
+  "events": [
+    "onResetClick"
+  ],
+  "isCanvas": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": true,
+  "key": "gw75kcjezq",
+  "leftColumn": 13,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 85,
+  "mobileLeftColumn": 13,
+  "mobileRightColumn": 36,
+  "mobileTopRow": 55,
+  "needsErrorInfo": false,
+  "onResetClick": "{{showAlert('Successfully reset!!', '');}}",
+  "originalBottomRow": 85,
+  "originalTopRow": 55,
+  "parentColumnSpace": 16.3125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 61,
+  "srcDoc": {
+    "css": ".widget-container {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  padding: 10px;\n  box-sizing: border-box;\n}\n\n.service-row {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 10px;\n  margin-bottom: 5px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n  transition: background-color 0.3s;\n}\n\n.service-row:hover {\n  background-color: #eaeaea;\n}\n\n.service-name {\n  flex: 1;\n  font-weight: bold;\n}\n\n.service-status {\n  margin-right: 20px;\n  color: gray;\n}\n\n.toggle-button {\n  background-color: var(--appsmith-theme-primaryColor);\n  color: white;\n  border: none;\n  padding: 5px 10px;\n  border-radius: 4px;\n  cursor: pointer;\n  transition: background-color 0.3s;\n}\n\n.toggle-button:hover {\n  background-color: darkred;\n}",
+    "html": "<div id=\"root\"></div>",
+    "js": "import React from 'https://cdn.jsdelivr.net/npm/react@18.2.0/+esm';\nimport ReactDOM from 'https://cdn.jsdelivr.net/npm/react-dom@18.2.0/+esm';\nfunction ServiceWidget() {\n  const [services, setServices] = React.useState(appsmith.model.Services || []);\n  const jwtToken = appsmith.store.JWT_TOKEN;\n  React.useEffect(() => {\n    // Listen for changes to the Services model\n    appsmith.onModelChange(model => {\n      if (model.Services && JSON.stringify(model.Services) !== JSON.stringify(services)) {\n        setServices(model.Services);\n      }\n    });\n  }, [services]);\n  const handleToggle = async service => {\n    try {\n      const response = await fetch('https://your.data.source/api/toggle', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n          'Authorization': `Bearer ${jwtToken}`\n        },\n        body: JSON.stringify({\n          serviceId: service.id\n        })\n      });\n      if (!response.ok) throw new Error('Network response was not ok');\n      const result = await response.json();\n\n      // Update the service status based on the result\n      setServices(prevServices => prevServices.map(s => s.id === service.id ? {\n        ...s,\n        status: result.newStatus\n      } : s));\n    } catch (error) {\n      console.error('Error toggling service:', error);\n    }\n  };\n  return /*#__PURE__*/React.createElement(\"div\", {\n    className: \"widget-container\"\n  }, services.map(service => /*#__PURE__*/React.createElement(\"div\", {\n    key: service.id,\n    className: \"service-row\"\n  }, /*#__PURE__*/React.createElement(\"div\", {\n    className: \"service-name\"\n  }, service.name), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"service-status\"\n  }, service.status), /*#__PURE__*/React.createElement(\"button\", {\n    className: \"toggle-button\",\n    onClick: () => handleToggle(service)\n  }, \"Toggle\"))));\n}\nappsmith.onReady(() => {\n  ReactDOM.render( /*#__PURE__*/React.createElement(ServiceWidget, null), document.getElementById('root'));\n});"
+  },
+  "theme": "{{appsmith.theme}}",
+  "topRow": 55,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": ".widget-container {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  padding: 10px;\n  box-sizing: border-box;\n}\n\n.service-row {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 10px;\n  margin-bottom: 5px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n  transition: background-color 0.3s;\n}\n\n.service-row:hover {\n  background-color: #eaeaea;\n}\n\n.service-name {\n  flex: 1;\n  font-weight: bold;\n}\n\n.service-status {\n  margin-right: 20px;\n  color: gray;\n}\n\n.toggle-button {\n  background-color: var(--appsmith-theme-primaryColor);\n  color: white;\n  border: none;\n  padding: 5px 10px;\n  border-radius: 4px;\n  cursor: pointer;\n  transition: background-color 0.3s;\n}\n\n.toggle-button:hover {\n  background-color: darkred;\n}",
+    "html": "<div id=\"root\"></div>",
+    "js": "import React from 'https://cdn.jsdelivr.net/npm/react@18.2.0/+esm';\nimport ReactDOM from 'https://cdn.jsdelivr.net/npm/react-dom@18.2.0/+esm';\n\nfunction ServiceWidget() {\n    const [services, setServices] = React.useState(appsmith.model.Services || []);\n    const jwtToken = appsmith.store.JWT_TOKEN;\n\n    React.useEffect(() => {\n        // Listen for changes to the Services model\n        appsmith.onModelChange((model) => {\n            if (model.Services && JSON.stringify(model.Services) !== JSON.stringify(services)) {\n                setServices(model.Services);\n            }\n        });\n    }, [services]);\n\n    const handleToggle = async (service) => {\n        try {\n            const response = await fetch('https://your.data.source/api/toggle', {\n                method: 'POST',\n                headers: {\n                    'Content-Type': 'application/json',\n                    'Authorization': `Bearer ${jwtToken}`,\n                },\n                body: JSON.stringify({ serviceId: service.id }),\n            });\n\n            if (!response.ok) throw new Error('Network response was not ok');\n            const result = await response.json();\n            \n            // Update the service status based on the result\n            setServices(prevServices => prevServices.map(s => \n                s.id === service.id ? { ...s, status: result.newStatus } : s));\n\n        } catch (error) {\n            console.error('Error toggling service:', error);\n        }\n    };\n\n    return (\n        <div className=\"widget-container\">\n            {services.map(service => (\n                <div key={service.id} className=\"service-row\">\n                    <div className=\"service-name\">{service.name}</div>\n                    <div className=\"service-status\">{service.status}</div>\n                    <button className=\"toggle-button\" onClick={() => handleToggle(service)}>Toggle</button>\n                </div>\n            ))}\n        </div>\n    );\n}\n\nappsmith.onReady(() => {\n    ReactDOM.render(<ServiceWidget />, document.getElementById('root'));\n});"
+  },
+  "version": 1,
+  "widgetId": "jbgtxwg8z5",
+  "widgetName": "Custom1"
+}

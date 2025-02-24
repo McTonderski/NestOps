@@ -1,12 +1,12 @@
 export default {
 	async queryAutoRefresh() {
 		try {
-			if(appsmith.store.JWTToken == ""){
-				navigateTo("Login Page")
-			}
 			showAlert(appsmith.store.JWTToken, "success")
 			const response = await getInstanceDetails.run();  // Run API request
 
+			if(appsmith.store.JWTToken === "" || response.status === 401){
+				navigateTo("Login Page")
+			}
 			if (response) {
 				// Extract necessary details
 				const cpuUsage = response.cpu_usage_percent;  // CPU usage in percentage
