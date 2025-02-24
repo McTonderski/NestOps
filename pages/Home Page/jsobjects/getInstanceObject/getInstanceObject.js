@@ -8,22 +8,22 @@ export default {
 				// Extract necessary details
 				const cpuUsage = response.cpu_usage_percent;  // CPU usage in percentage
 				const memoryUsage = response.memory_usage.percent;  // Memory usage in percentage
-				const containerSummary = {
-					Running: 0,
-					Stopped: 0,
-					Errors: 0
-				};
+				const containerSummary = [
+					{ x: "Running", y: 0 },
+					{ x: "Stopped", y: 0 },
+					{ x: "Errors", y: 0 }
+				];
 
 				response.running_docker_containers.forEach(container => {
 					if (container.Status === "Running") {
-						containerSummary.Running++;
+						containerSummary.find(item => item.x === "Running").y++;
 					} else if (container.Status === "Stopped") {
-						containerSummary.Stopped++;
+						containerSummary.find(item => item.x === "Stopped").y++;
 					} else {
-						containerSummary.Errors++;
+						containerSummary.find(item => item.x === "Errors").y++;
 					}
 				});
-				const servicesCount = containerSummary.Running + containerSummary.Errors + containerSummary.Stopped;  // Number of running services
+				const servicesCount = containerSummary.reduce((sum, item) => sum + item.y, 0);
 
 				// Store values in Appsmith
 				storeValue("CPU_USAGE", cpuUsage);

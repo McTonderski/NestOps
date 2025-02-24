@@ -7,7 +7,7 @@
   "boxShadow": "none",
   "chartData": {
     "gggz0835nx": {
-      "data": "[\n  {\n    \"x\": \"Low\",\n    \"y\": 20000\n  },\n  {\n    \"x\": \"Medium\",\n    \"y\": 22000\n  },\n  {\n    \"x\": \"High\",\n    \"y\": 32000\n  },\n  {\n    \"x\": \"Critical\",\n    \"y\": 10000\n  }\n]",
+      "data": "c",
       "seriesName": "Priority"
     }
   },
