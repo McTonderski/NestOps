@@ -8,14 +8,29 @@ export default {
 				// Extract necessary details
 				const cpuUsage = response.cpu_usage_percent;  // CPU usage in percentage
 				const memoryUsage = response.memory_usage.percent;  // Memory usage in percentage
-				const runningServices = response.running_docker_containers.map(container => container.Name); // List of running services
-				const servicesCount = runningServices.length;  // Number of running services
+				const containerSummary = {
+					Running: 0,
+					Stopped: 0,
+					Errors: 0
+				};
+
+				response.running_docker_containers.forEach(container => {
+					if (container.Status === "Running") {
+						containerSummary.Running++;
+					} else if (container.Status === "Stopped") {
+						containerSummary.Stopped++;
+					} else {
+						containerSummary.Errors++;
+					}
+				});
+				const servicesCount = containerSummary.Running + containerSummary.Errors + containerSummary.Stopped;  // Number of running services
 
 				// Store values in Appsmith
 				storeValue("CPU_USAGE", cpuUsage);
 				storeValue("MEMORY_USAGE", memoryUsage);
 				storeValue("SERVICE_COUNT", servicesCount);
-				storeValue("SERVICE_LIST", runningServices);
+				storeValue("SERVICE_LIST", response.running_docker_containers);
+				storeValue("SERVICE_STATS", containerSummary)
 
 			} else {
 				showAlert("Error: Invalid response received", "error");

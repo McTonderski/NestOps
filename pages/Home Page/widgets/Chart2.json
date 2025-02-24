@@ -7,7 +7,7 @@
   "boxShadow": "none",
   "chartData": {
     "gggz0835nx": {
-      "data": "[\n  {\n    \"x\": \"Open\",\n    \"y\": 20000\n  },\n  {\n    \"x\": \"In Progress\",\n    \"y\": 22000\n  },\n  {\n    \"x\": \"Closed\",\n    \"y\": 32000\n  }\n]",
+      "data": "{{app_smith.SERVICE_STATS}}",
       "seriesName": "Status"
     }
   },
@@ -170,6 +170,9 @@
     },
     {
       "key": "fontFamily"
+    },
+    {
+      "key": "chartData.gggz0835nx.data"
     }
   ],
   "dynamicTriggerPathList": [],
