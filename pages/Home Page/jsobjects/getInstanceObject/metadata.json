@@ -6,11 +6,6 @@
     "pageId": "Home Page",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": [
-      {
-        "name": "intervalId",
-        "value": "null"
-      }
-    ]
+    "variables": []
   }
 }

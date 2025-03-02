@@ -9,7 +9,7 @@
   "animateLoading": true,
   "backgroundColor": "transparent",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 89,
+  "bottomRow": 90,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
@@ -32,7 +32,7 @@
       "flexLayers": [],
       "isLoading": false,
       "isVisible": true,
-      "key": "6jwq01ryre",
+      "key": "r2cm674pw9",
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
@@ -40,22 +40,22 @@
       "minWidth": 450,
       "mobileBottomRow": 400,
       "mobileLeftColumn": 0,
-      "mobileRightColumn": 406.125,
+      "mobileRightColumn": 421.5,
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "noPad": true,
       "openParentPropertyPane": true,
       "parentColumnSpace": 1,
-      "parentId": "g3ea0oq6mm",
+      "parentId": "8xvy346nyb",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
-      "rightColumn": 406.125,
+      "rightColumn": 421.5,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "fvb1v5f41m",
-      "widgetName": "Canvas4"
+      "widgetId": "6jb6649u3j",
+      "widgetName": "Canvas6"
     }
   ],
   "currentItemsView": "{{[]}}",
@@ -80,12 +80,8 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "listData"
     }
   ],
-  "dynamicTriggerPathList": [],
   "enhancements": true,
   "flexVerticalAlignment": "start",
   "gridType": "vertical",
@@ -95,33 +91,49 @@
   "isVisible": true,
   "itemBackgroundColor": "#FFFFFF",
   "itemSpacing": 8,
-  "key": "9gitpxa6dk",
-  "leftColumn": 8,
-  "listData": "{{appsmith.store.services}}",
-  "mainCanvasId": "fvb1v5f41m",
-  "mainContainerId": "y9giyk2g0c",
+  "key": "9uxp3ije0i",
+  "leftColumn": 33,
+  "listData": [
+    {
+      "id": "001",
+      "img": "https://assets.appsmith.com/widgets/default.png",
+      "name": "Blue"
+    },
+    {
+      "id": "002",
+      "img": "https://assets.appsmith.com/widgets/default.png",
+      "name": "Green"
+    },
+    {
+      "id": "003",
+      "img": "https://assets.appsmith.com/widgets/default.png",
+      "name": "Red"
+    }
+  ],
+  "mainCanvasId": "6jb6649u3j",
+  "mainContainerId": "zowrwqrza3",
   "minWidth": 450,
-  "mobileBottomRow": 119,
-  "mobileLeftColumn": 8,
-  "mobileRightColumn": 32,
-  "mobileTopRow": 79,
+  "mobileBottomRow": 90,
+  "mobileLeftColumn": 33,
+  "mobileRightColumn": 57,
+  "mobileTopRow": 50,
   "needsErrorInfo": false,
-  "originalBottomRow": 89,
-  "originalTopRow": 49,
+  "originalBottomRow": 90,
+  "originalTopRow": 50,
   "pageSize": 3,
-  "parentColumnSpace": 16.921875,
+  "parentColumnSpace": 17.5625,
   "parentId": "0",
   "parentRowSpace": 10,
-  "primaryKeys": "{{List1.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
+  "primaryKeys": "{{List2.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
   "renderMode": "CANVAS",
   "requiresFlatWidgetChildren": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 32,
+  "rightColumn": 57,
   "selectedItemView": "{{{}}}",
   "templateHeight": 160,
-  "topRow": 49,
+  "topRow": 50,
   "triggeredItemView": "{{{}}}",
   "type": "LIST_WIDGET_V2",
-  "widgetId": "g3ea0oq6mm",
-  "widgetName": "List1"
+  "widgetId": "8xvy346nyb",
+  "widgetName": "List2"
 }
