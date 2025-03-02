@@ -3,15 +3,15 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "0px",
-  "bottomRow": 51,
+  "bottomRow": 49,
   "boxShadow": "none",
   "chartData": {
     "gggz0835nx": {
-      "data": "[\n  {\n    \"x\": \"Open\",\n    \"y\": 20000\n  },\n  {\n    \"x\": \"In Progress\",\n    \"y\": 22000\n  },\n  {\n    \"x\": \"Closed\",\n    \"y\": 32000\n  }\n]",
+      "data": "{{appsmith.store.SERVICE_STATS}}",
       "seriesName": "Status"
     }
   },
-  "chartName": "Tasks",
+  "chartName": "Services",
   "chartType": "PIE_CHART",
   "customEChartConfig": {
     "dataset": {
@@ -170,6 +170,9 @@
     },
     {
       "key": "fontFamily"
+    },
+    {
+      "key": "chartData.gggz0835nx.data"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -181,19 +184,21 @@
   "isVisible": true,
   "key": "atkbejtqfb",
   "labelOrientation": "auto",
-  "leftColumn": 13,
+  "leftColumn": 8,
+  "originalBottomRow": 49,
+  "originalTopRow": 23,
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 36,
+  "rightColumn": 31,
   "searchTags": [
     "graph",
     "visuals",
     "visualisations"
   ],
   "showDataPointLabel": false,
-  "topRow": 25,
+  "topRow": 23,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "pjxspbfsc9",

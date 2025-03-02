@@ -5,13 +5,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 17,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "test@test.com",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "validation"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -20,7 +23,7 @@
   "inputType": "TEXT",
   "isDisabled": false,
   "isLoading": false,
-  "isRequired": false,
+  "isRequired": true,
   "isVisible": true,
   "key": "yfvr62ea78",
   "label": "Login",
@@ -30,6 +33,7 @@
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 8,
+  "maxChars": "120",
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -51,6 +55,7 @@
   "showStepArrows": false,
   "topRow": 10,
   "type": "INPUT_WIDGET_V2",
+  "validation": "{{LoginInput.text.length > 0}}",
   "version": 2,
   "widgetId": "xozvh8f5j9",
   "widgetName": "LoginInput"

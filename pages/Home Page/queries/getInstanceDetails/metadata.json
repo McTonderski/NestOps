@@ -12,11 +12,16 @@
       "formData": {
         "apiContentType": "none"
       },
-      "headers": [],
+      "headers": [
+        {
+          "key": "Authorization",
+          "value": "BEARER {{appsmith.store.JWT_TOKEN}}"
+        }
+      ],
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/api/instance/details",
+      "path": "/instance/details",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -32,10 +37,14 @@
       "name": "NestOpsSource",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "headers[0].value"
+      }
+    ],
     "executeOnLoad": false,
     "name": "getInstanceDetails",
     "pageId": "Home Page",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }
