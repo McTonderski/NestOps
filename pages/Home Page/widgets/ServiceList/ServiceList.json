@@ -112,7 +112,7 @@
   "parentColumnSpace": 16.921875,
   "parentId": "0",
   "parentRowSpace": 10,
-  "primaryKeys": "{{ServiceList.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
+  "primaryKeys": "{{ServiceList.listData.map((currentItem, currentIndex) => currentItem[\"name\"] )}}",
   "renderMode": "CANVAS",
   "requiresFlatWidgetChildren": true,
   "responsiveBehavior": "fill",
