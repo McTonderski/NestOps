@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "fullyQualifiedName": "ListServices.listServicesQuery",
     "name": "listServicesQuery",
     "pageId": "Home Page",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }
