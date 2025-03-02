@@ -18,10 +18,7 @@ export default {
 	},
 
 	intervalId: null,  // Store the interval ID for clearing
-	
-	async flipSwitches(){
-		
-	}
+
 
 	async startAutoRefresh() {
 		if (AutoRefreshInstance.isSwitchedOn) {
