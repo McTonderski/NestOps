@@ -1,9 +1,10 @@
 export default {
-	async queryAutoRefresh() {
-		try {
-			showAlert(appsmith.store.JWTToken, "success")
+	async queryAutoRefresh(){
+		let containerSummary = [{"x": "running", "y": 0},
+														{"x": "stopped", "y": 0},
+														{"x": "error", "y": 0}]
+		try{
 			const response = await getInstanceDetails.run();  // Run API request
-
 			if(appsmith.store.JWTToken === "" || response.status === 401){
 				navigateTo("Login Page")
 			}
@@ -11,12 +12,6 @@ export default {
 				// Extract necessary details
 				const cpuUsage = response.cpu_usage_percent;  // CPU usage in percentage
 				const memoryUsage = response.memory_usage.percent;  // Memory usage in percentage
-				const containerSummary = [
-					{ x: "Running", y: 0 },
-					{ x: "Stopped", y: 0 },
-					{ x: "Errors", y: 0 }
-				];
-
 				response.running_docker_containers.forEach(container => {
 					if (container.status === "running") {
 						containerSummary.find(item => item.x === "Running").y++;
@@ -41,9 +36,8 @@ export default {
 			storeValue("CPU_USAGE", "N/A");
 			storeValue("MEMORY_USAGE", "N/A");
 			storeValue("SERVICE_COUNT", "N/A");
-			storeValue("SERVICE_LIST", "N/A");
+			storeValue("SERVICE_LIST", containerSummary);
 			storeValue("SERVICE_STATS", "N/A")
-			showAlert("Failed to fetch instance details: " + e.message, "error");
 		}
 		return true;
 	},
@@ -64,4 +58,4 @@ export default {
 			}
 		}
 	}
-};
+}

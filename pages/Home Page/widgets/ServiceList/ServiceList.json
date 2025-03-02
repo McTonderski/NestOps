@@ -9,7 +9,7 @@
   "animateLoading": true,
   "backgroundColor": "transparent",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 119,
+  "bottomRow": 89,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
@@ -80,6 +80,9 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "listData"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -94,7 +97,7 @@
   "itemSpacing": 8,
   "key": "9gitpxa6dk",
   "leftColumn": 8,
-  "listData": "[\n  {\n    \"HomeAssistant\": \"HomeAssistantManager\",\n    \"Mealie\": \"MealieManager\"\n}\n]",
+  "listData": "{{appsmith.store.services}}",
   "mainCanvasId": "fvb1v5f41m",
   "mainContainerId": "y9giyk2g0c",
   "minWidth": 450,
@@ -103,22 +106,22 @@
   "mobileRightColumn": 32,
   "mobileTopRow": 79,
   "needsErrorInfo": false,
-  "originalBottomRow": 119,
-  "originalTopRow": 79,
+  "originalBottomRow": 89,
+  "originalTopRow": 49,
   "pageSize": 3,
   "parentColumnSpace": 16.921875,
   "parentId": "0",
   "parentRowSpace": 10,
-  "primaryKeys": "{{List1.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
+  "primaryKeys": "{{ServiceList.listData.map((currentItem, currentIndex) => currentItem[\"name\"] )}}",
   "renderMode": "CANVAS",
   "requiresFlatWidgetChildren": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 32,
+  "rightColumn": 56,
   "selectedItemView": "{{{}}}",
   "templateHeight": 160,
-  "topRow": 79,
+  "topRow": 49,
   "triggeredItemView": "{{{}}}",
   "type": "LIST_WIDGET_V2",
   "widgetId": "g3ea0oq6mm",
-  "widgetName": "List1"
+  "widgetName": "ServiceList"
 }

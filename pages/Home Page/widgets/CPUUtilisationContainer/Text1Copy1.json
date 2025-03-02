@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 6,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -30,17 +30,17 @@
   "parentId": "3pghczwpij",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 63,
+  "rightColumn": 15,
   "searchTags": [
     "typography",
     "paragraph",
     "label"
   ],
   "shouldTruncate": false,
-  "text": "CPU Utilisation",
+  "text": "CPU",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 1,
+  "topRow": 2,
   "type": "TEXT_WIDGET",
   "version": 1,
   "widgetId": "vh4tvl1eea",
