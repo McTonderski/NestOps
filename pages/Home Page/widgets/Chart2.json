@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "0px",
-  "bottomRow": 54,
+  "bottomRow": 49,
   "boxShadow": "none",
   "chartData": {
     "gggz0835nx": {
@@ -11,7 +11,7 @@
       "seriesName": "Status"
     }
   },
-  "chartName": "Tasks",
+  "chartName": "Services",
   "chartType": "PIE_CHART",
   "customEChartConfig": {
     "dataset": {
@@ -184,21 +184,21 @@
   "isVisible": true,
   "key": "atkbejtqfb",
   "labelOrientation": "auto",
-  "leftColumn": 13,
-  "originalBottomRow": 54,
-  "originalTopRow": 28,
+  "leftColumn": 8,
+  "originalBottomRow": 49,
+  "originalTopRow": 23,
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 36,
+  "rightColumn": 31,
   "searchTags": [
     "graph",
     "visuals",
     "visualisations"
   ],
   "showDataPointLabel": false,
-  "topRow": 28,
+  "topRow": 23,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "pjxspbfsc9",

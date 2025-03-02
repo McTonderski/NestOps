@@ -37,7 +37,7 @@
       "index": 0,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Add Users",
+      "label": "Update",
       "menuItems": {},
       "placement": "CENTER",
       "widgetId": ""
@@ -51,21 +51,21 @@
       "index": 1,
       "isDisabled": false,
       "isVisible": true,
-      "label": "List Users",
+      "label": "Reboot",
       "menuItems": {},
       "placement": "CENTER",
       "widgetId": ""
     },
     "groupButton3": {
       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-      "buttonType": "MENU",
+      "buttonType": "SIMPLE",
       "disabledWhenInvalid": false,
-      "iconName": "delete",
+      "iconName": "power",
       "id": "groupButton3",
       "index": 3,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Remove Users",
+      "label": "Power Off",
       "menuItems": {
         "menuItem1": {
           "backgroundColor": "#FFFFFF",
@@ -118,7 +118,7 @@
       "isSeparator": false,
       "isVisible": true,
       "itemType": "BUTTON",
-      "label": "Change Users",
+      "label": "Tailscale auth",
       "menuItems": {},
       "placement": "CENTER",
       "variant": "filled",
@@ -140,7 +140,7 @@
   "originalBottomRow": 10,
   "originalTopRow": 5,
   "parentColumnSpace": 5.8046875,
-  "parentId": "dy3znngo5z",
+  "parentId": "acuha4mk73",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
@@ -148,6 +148,6 @@
   "topRow": 4,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "vhnkbd1n9z",
-  "widgetName": "ButtonGroup1"
+  "widgetId": "7t4kq3y7e4",
+  "widgetName": "ButtonGroup1Copy"
 }

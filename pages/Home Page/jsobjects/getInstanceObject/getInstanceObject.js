@@ -38,6 +38,11 @@ export default {
 				showAlert("Error: Invalid response received", "error");
 			}
 		} catch (e) {
+			storeValue("CPU_USAGE", "N/A");
+			storeValue("MEMORY_USAGE", "N/A");
+			storeValue("SERVICE_COUNT", "N/A");
+			storeValue("SERVICE_LIST", "N/A");
+			storeValue("SERVICE_STATS", "N/A")
 			showAlert("Failed to fetch instance details: " + e.message, "error");
 		}
 		return true;
