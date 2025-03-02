@@ -6,6 +6,7 @@ services:
     container_name: fastapi-app
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock  # Allow FastAPI to control Docker
+      - ./services:/app/services
     ports:
       - "8765:8000"
     depends_on:

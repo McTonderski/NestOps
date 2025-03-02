@@ -1,2 +1,0 @@
-[01/Feb/2025:19:33:39 +0000] 404 - GET http nestops.duckdns.org "/edit" [Client 100.92.54.32] [Length 183] [Gzip 3.21] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" "http://nestops.duckdns.org/edit"
-[01/Feb/2025:19:33:39 +0000] 404 - GET http nestops.duckdns.org "/favicon.ico" [Client 100.92.54.32] [Length 183] [Gzip 3.21] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" "http://nestops.duckdns.org/edit"

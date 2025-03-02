@@ -1,0 +1,5 @@
+2025/03/01 10:09:17 [error] 236#236: *1 open() "/var/www/html/edit" failed (2: No such file or directory), client: 100.92.54.32, server: localhost-nginx-proxy-manager, request: "GET /edit HTTP/1.1", host: "nestops.duckdns.org"
+2025/03/01 10:09:18 [alert] 236#236: 512 worker_connections are not enough
+2025/03/01 10:09:18 [error] 237#237: *2003 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "nestops.duckdns.org", referrer: "http://nestops.duckdns.org/edit"
+2025/03/01 10:09:18 [alert] 237#237: 512 worker_connections are not enough
+2025/03/01 10:09:18 [error] 236#236: *2015 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /apple-touch-icon-precomposed.png HTTP/1.1", upstream: "http://127.0.0.1:80/apple-touch-icon-precomposed.png", host: "nestops.duckdns.org"

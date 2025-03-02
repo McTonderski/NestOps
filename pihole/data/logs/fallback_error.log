@@ -1,1 +1,0 @@
-2025/02/01 18:12:31 [error] 177#177: *375 open() "/var/www/html/admin/api.php" failed (2: No such file or directory), client: 100.92.54.32, server: localhost-nginx-proxy-manager, request: "GET /admin/api.php?getCacheInfo HTTP/1.1", host: "100.90.43.109", referrer: "http://100.90.43.109/admin/settings.php?tab=privacy"
