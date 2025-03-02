@@ -1,0 +1,45 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "log-out",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "phxvx6tcn1",
+  "leftColumn": 56,
+  "minWidth": 50,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 56,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onClick": "{{navigateTo('Login', {}, 'SAME_WINDOW');}}",
+  "parentColumnSpace": 7.6455078125,
+  "parentId": "pbvmrmfaem",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 60,
+  "topRow": 2,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "bml7ychc69",
+  "widgetName": "LogoutButton"
+}
