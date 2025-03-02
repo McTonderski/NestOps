@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\usepackage{graphicx} % For including graphics
+\usepackage{setspace} % For line spacing
+\usepackage{hyperref} % For clickable references
+\usepackage{titlesec} % For custom section titles
+\usepackage{tocloft} % For customizing the table of contents
+\usepackage{biblatex} % For bibliography management
+\addbibresource{bibliography.bib}
+
+% Include additional settings
+\input{preamble}
+
+\begin{document}
+
+% Title page
+\input{chapters/stronatytulowa}
+
+% Abstract
+\chapter*{Streszczenie}
+Tutaj umieść streszczenie swojej pracy magisterskiej.
+
+\newpage
+
+% Table of Contents
+\setcounter{tocdepth}{1}
+\tableofcontents
+\newpage
+
+% Chapters
+\input{chapters/chapter1}
+\input{chapters/chapter2}
+\input{chapters/chapter3}
+\input{chapters/chapter4}
+\input{chapters/chapter5}
+\input{chapters/chapter6}
+
+% Bibliography
+\newpage
+\printbibliography
+
+\end{document}
