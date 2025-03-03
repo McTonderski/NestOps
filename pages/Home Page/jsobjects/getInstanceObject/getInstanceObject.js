@@ -33,6 +33,7 @@ export default {
 				showAlert("Error: Invalid response received", "error");
 			}
 		} catch (e) {
+			showAlert(e.message, "error");
 			storeValue("CPU_USAGE", "N/A");
 			storeValue("MEMORY_USAGE", "N/A");
 			storeValue("SERVICE_COUNT", "N/A");
