@@ -7,7 +7,7 @@
   "boxShadow": "none",
   "chartData": {
     "gggz0835nx": {
-      "data": "{{appsmith.store.SERVICE_LIST}}",
+      "data": "{{appsmith.store.SERVICE_STATS}}",
       "seriesName": "Status"
     }
   },
