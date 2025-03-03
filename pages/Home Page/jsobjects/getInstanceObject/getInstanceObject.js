@@ -15,6 +15,7 @@ export default {
 				const cpuUsage = response.cpu_usage_percent;  // CPU usage in percentage
 				const memoryUsage = response.memory_usage.percent;  // Memory usage in percentage
 				response.running_docker_containers.forEach(container => {
+					console.info(container);
 					if (container.Status === "running") {
 						containerSummary.find(item => item.x === "Running").y++;
 					} else if (container.Status === "exited") {
