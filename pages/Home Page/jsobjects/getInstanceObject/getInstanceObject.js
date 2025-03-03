@@ -39,8 +39,8 @@ export default {
 			showAlert(e.message, "error");
 			storeValue("CPU_USAGE", "N/A");
 			storeValue("MEMORY_USAGE", "N/A");
-			storeValue("SERVICE_COUNT", "N/A");
-			storeValue("SERVICE_LIST", [{"x": "Can't gather Service List", "y": 0}]);
+			storeValue("SERVICE_COUNT", [{x: "Can't gather Service List", y: 0}]);
+			storeValue("SERVICE_LIST", [{"name": "can't find"}]);
 			storeValue("SERVICE_STATS", "N/A")
 		}
 		return true;
