@@ -10,6 +10,7 @@ export default {
 			}
 			if (response) {
 				// Extract necessary details
+				console.info(response)
 				const cpuUsage = response.cpu_usage_percent;  // CPU usage in percentage
 				const memoryUsage = response.memory_usage.percent;  // Memory usage in percentage
 				response.running_docker_containers.forEach(container => {
