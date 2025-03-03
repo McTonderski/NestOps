@@ -19,7 +19,6 @@ export default {
 
 	intervalId: null,  // Store the interval ID for clearing
 
-
 	async startAutoRefresh() {
 		if (AutoRefreshInstance.isSwitchedOn) {
 			if (!this.intervalId) {  // Prevent multiple intervals
