@@ -1,8 +1,10 @@
 export default {
 	async queryAutoRefresh(){
-		let containerSummary = [{"x": "running", "y": 0},
-														{"x": "stopped", "y": 0},
-														{"x": "error", "y": 0}];
+		const containerSummary = [
+			{ x: "Running", y: 0 },
+			{ x: "Stopped", y: 0 },
+			{ x: "Errors", y: 0 }
+		];
 		try{
 			const response = await getInstanceDetails.run();  // Run API request
 			if(appsmith.store.JWTToken === "" || response.status === 401){
@@ -10,7 +12,6 @@ export default {
 			}
 			if (response) {
 				// Extract necessary details
-				console.info(response)
 				const cpuUsage = response.cpu_usage_percent;  // CPU usage in percentage
 				const memoryUsage = response.memory_usage.percent;  // Memory usage in percentage
 				response.running_docker_containers.forEach(container => {
@@ -24,7 +25,6 @@ export default {
 				});
 				const servicesCount = containerSummary.reduce((sum, item) => sum + item.y, 0);
 				// Store values in Appsmith
-				console.info(response.running_docker_containers)
 				storeValue("CPU_USAGE", cpuUsage);
 				storeValue("MEMORY_USAGE", memoryUsage);
 				storeValue("SERVICE_COUNT", servicesCount);
