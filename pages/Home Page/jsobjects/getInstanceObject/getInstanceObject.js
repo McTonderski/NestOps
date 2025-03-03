@@ -15,9 +15,9 @@ export default {
 				const cpuUsage = response.cpu_usage_percent;  // CPU usage in percentage
 				const memoryUsage = response.memory_usage.percent;  // Memory usage in percentage
 				response.running_docker_containers.forEach(container => {
-					if (container.status === "running") {
+					if (container.Status === "running") {
 						containerSummary.find(item => item.x === "Running").y++;
-					} else if (container.status === "exited") {
+					} else if (container.Status === "exited") {
 						containerSummary.find(item => item.x === "Stopped").y++;
 					} else {
 						containerSummary.find(item => item.x === "Errors").y++;
@@ -29,7 +29,6 @@ export default {
 				storeValue("MEMORY_USAGE", memoryUsage);
 				storeValue("SERVICE_COUNT", servicesCount);
 				storeValue("SERVICE_LIST", response.running_docker_containers);
-				console.info(containerSummary)
 				storeValue("SERVICE_STATS", containerSummary)
 
 			} else {
