@@ -29,6 +29,7 @@ export default {
 				storeValue("MEMORY_USAGE", memoryUsage);
 				storeValue("SERVICE_COUNT", servicesCount);
 				storeValue("SERVICE_LIST", response.running_docker_containers);
+				console.info(containerSummary)
 				storeValue("SERVICE_STATS", containerSummary)
 
 			} else {
