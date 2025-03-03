@@ -23,6 +23,7 @@ export default {
 				});
 				const servicesCount = containerSummary.reduce((sum, item) => sum + item.y, 0);
 				// Store values in Appsmith
+				console.info(response.running_docker_containers)
 				storeValue("CPU_USAGE", cpuUsage);
 				storeValue("MEMORY_USAGE", memoryUsage);
 				storeValue("SERVICE_COUNT", servicesCount);
