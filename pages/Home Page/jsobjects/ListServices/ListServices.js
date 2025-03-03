@@ -7,8 +7,7 @@ export default {
 				navigateTo("Login Page")
 			}
 			if (response) {
-				storeValue("services", [{"name": "demo", "status": "stopped"}]);
-				// storeValue("services", response);
+				storeValue("services", response);
 			} else {
 				storeValue("services", [{"name": "demo", "status": "stopped"}]);
 			}
