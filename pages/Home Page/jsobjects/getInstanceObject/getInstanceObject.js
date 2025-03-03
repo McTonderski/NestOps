@@ -2,7 +2,7 @@ export default {
 	async queryAutoRefresh(){
 		let containerSummary = [{"x": "running", "y": 0},
 														{"x": "stopped", "y": 0},
-														{"x": "error", "y": 0}]
+														{"x": "error", "y": 0}];
 		try{
 			const response = await getInstanceDetails.run();  // Run API request
 			if(appsmith.store.JWTToken === "" || response.status === 401){
@@ -37,7 +37,7 @@ export default {
 			storeValue("CPU_USAGE", "N/A");
 			storeValue("MEMORY_USAGE", "N/A");
 			storeValue("SERVICE_COUNT", "N/A");
-			storeValue("SERVICE_LIST", containerSummary);
+			storeValue("SERVICE_LIST", [{"x": "Can't gather Service List", "y": 0}]);
 			storeValue("SERVICE_STATS", "N/A")
 		}
 		return true;
