@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "fullyQualifiedName": "getInstanceObject.queryAutoRefresh",
     "name": "queryAutoRefresh",
     "pageId": "Home Page",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }
