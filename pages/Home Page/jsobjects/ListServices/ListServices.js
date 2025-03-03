@@ -3,13 +3,14 @@ export default {
 		try {
 			const response = await ServiceListGet.run();  // Run API request
 			if(appsmith.store.JWTToken === "" || response.status === 401){
+				storeValue("services", [{"name": "demo", "status": "stopped"}]);
 				navigateTo("Login Page")
 			}
 			if (response) {
-				storeValue("services", response);
+				storeValue("services", [{"name": "demo", "status": "stopped"}]);
+				// storeValue("services", response);
 			} else {
 				storeValue("services", [{"name": "demo", "status": "stopped"}]);
-				showAlert("Error: Invalid response received", "error");
 			}
 		} catch (e) {
 
