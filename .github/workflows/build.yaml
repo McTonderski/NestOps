@@ -1,3 +1,4 @@
+name: Build and Push NestOps Image
 on:
     push:
       branches:
@@ -18,10 +19,10 @@ jobs:
 
             - name: Build Docker Image
               run: |
-                docker build -t nestops:${{ env.VERSION }} -f backend/Dockerfile ./backend/
-                docker tag nestops:${{ env.VERSION }} nestops:latest
-
-            - name: Save Docker Image
+                docker build -t localhost:5000/nestops:${{ env.VERSION }} .
+                docker tag localhost:5000/nestops:${{ env.VERSION }} localhost:5000/nestops:latest
+      
+            - name: Push Docker Image to Local Registry
               run: |
-                docker save nestops:${{ env.VERSION }} -o nestops${{ env.VERSION }}.tar
-                docker save nestops:latest -o nestops_latest.tar
+                docker push localhost:5000/nestops:${{ env.VERSION }}
+                docker push localhost:5000/nestops:latest

@@ -21,32 +21,64 @@
 
 Współczesne systemy informatyczne wymagają nie tylko solidnej implementacji, ale również efektywnego zarządzania cyklem życia oprogramowania. W tym kontekście, integracja narzędzi CI/CD (Continuous Integration / Continuous Deployment) odgrywa kluczową rolę w automatyzacji procesów budowania, testowania i wdrażania aplikacji.
 
-\subsubsection{Wersjonowanie obrazów Docker}
+\subsubsection{Zastosowanie self-hosted runnera}
 
-Jednym z kluczowych aspektów zarządzania cyklem życia oprogramowania jest wersjonowanie obrazów Docker. W procesie CI/CD stosowanie jednoznacznych tagów wersji dla obrazów jest niezwykle istotne. 
+W celu zapewnienia kompatybilności architektury uruchomieniowej systemu, zdecydowano się na użycie **self-hosted runnera** zamiast domyślnych runnerów GitHub Actions. Domyślne maszyny CI/CD oferowane przez GitHub działają wyłącznie na **architekturze x86**, co ogranicza możliwość testowania i wdrażania aplikacji na innych platformach, takich jak **ARM** (np. Raspberry Pi, serwery oparte na ARM64). 
 
-Złe praktyki, takie jak używanie tagu \texttt{latest}, mogą prowadzić do problemów, takich jak:
+Zastosowanie własnego runnera pozwala na:
 \begin{itemize}
-    \item Brak gwarancji, że konkretna wersja obrazu zostanie pobrana – \texttt{latest} może odnosić się do różnych wersji w zależności od momentu pobrania.
-    \item Trudności w debugowaniu – jeśli nowa wersja obrazu powoduje błędy, brak jednoznacznej identyfikacji wersji utrudnia powrót do stabilnej wersji.
-    \item Potencjalne konflikty w środowiskach produkcyjnych – niekontrolowana zmiana wersji obrazu może prowadzić do nieoczekiwanych błędów.
+    \item Uruchamianie testów i budowanie obrazów Docker na architekturze zgodnej z docelowym środowiskiem produkcyjnym.
+    \item Pełną kontrolę nad zasobami sprzętowymi wykorzystywanymi w procesie CI/CD.
+    \item Możliwość integracji z lokalnym registry dla przechowywania obrazów Docker.
 \end{itemize}
 
-Aby rozwiązać ten problem, obrazy powinny być wersjonowane według schematu \texttt{major.minor.patch} (np. \texttt{1.0.3}) oraz posiadać tag \texttt{latest} wskazujący na ostatnią stabilną wersję.
-
-\subsubsection{GitHub Actions – wersjonowanie obrazów Docker}
-
-W celu zapewnienia właściwego wersjonowania obrazów, GitHub Actions został skonfigurowany do:
-\begin{enumerate}
-    \item Budowania obrazu Docker po każdej zmianie w repozytorium.
-    \item Automatycznego generowania numeru wersji na podstawie SHA commita lub tagu.
-    \item Nadawania obrazowi dwóch tagów: \texttt{latest} oraz konkretnej wersji.
-\end{enumerate}
-
-Przykładowy plik konfiguracyjny GitHub Actions implementujący wersjonowanie obrazów wygląda następująco:
+\subsubsection{Workflow GitHub Actions dla testowania}
 
 \begin{verbatim}
-name: CI/CD Pipeline
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    services:
+      mongo:
+        image: mongo:latest
+        ports:
+          - 27017:27017
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio httpx
+
+      - name: Run Pytest
+        run: pytest -v
+\end{verbatim}
+
+\subsubsection{Workflow GitHub Actions dla budowania i wersjonowania obrazów Docker}
+
+Po przejściu testów jednostkowych obraz Docker jest budowany i pushowany do lokalnego rejestru uruchomionego na **localhost:5000**.
+
+\begin{verbatim}
+name: Build and Push Docker Image
 
 on:
     push:
@@ -54,38 +86,46 @@ on:
         - main
         - dev
     pull_request:
-        branches: [develop]
+        branches: [dev, main]
+
 jobs:
-    build_and_version:
-        runs-on: ubuntu-latest
+  build_and_push:
+    runs-on: self-hosted
 
-        steps:
-            - name: Checkout Repository
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-            - name: Extract Version
-              run: echo "VERSION=$(date +'%Y%m%d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+      - name: Extract Version
+        run: echo "VERSION=$(date +'%Y%m%d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
-            - name: Build Docker Image
-              run: |
-                docker build -t nestops:${{ env.VERSION }} -f backend/Dockerfile ./backend/
-                docker tag nestops:${{ env.VERSION }} nestops:latest
+      - name: Build Docker Image
+        run: |
+          docker build -t localhost:5000/myapp:${{ env.VERSION }} .
+          docker tag localhost:5000/myapp:${{ env.VERSION }} localhost:5000/myapp:latest
 
-            - name: Save Docker Image
-              run: |
-                docker save nestops:${{ env.VERSION }} -o nestops${{ env.VERSION }}.tar
-                docker save nestops:latest -o nestops_latest.tar
+      - name: Push Docker Image to Local Registry
+        run: |
+          docker push localhost:5000/myapp:${{ env.VERSION }}
+          docker push localhost:5000/myapp:latest
 \end{verbatim}
 
-\subsubsection{Publikacja obrazów w lokalnym registry}
+\subsubsection{Korzyści z bezpośredniego pushowania obrazu do registry}
 
-W powyższej konfiguracji obrazy Docker są budowane, ale nie są pushowane do zewnętrznych rejestrów. Wdrożenie do prywatnego rejestru (np. działającego na lokalnym serwerze) można wykonać po przełączeniu runnera na lokalnego i użyciu poniższych komend:
+W przeciwieństwie do wcześniejszej konfiguracji, w której obraz był zapisywany lokalnie za pomocą \texttt{docker save}, obecnie jest on od razu przesyłany do prywatnego rejestru. Takie podejście:
+\begin{itemize}
+    \item Umożliwia natychmiastowe wykorzystanie obrazu w środowisku produkcyjnym bez potrzeby ręcznego jego ładowania.
+    \item Pozwala na prostsze zarządzanie wersjami obrazów w registry.
+    \item Minimalizuje czas między budowaniem a wdrożeniem.
+\end{itemize}
+
+\subsubsection{Publikacja obrazu do lokalnego registry}
+
+Wszystkie wersje aplikacji są automatycznie przechowywane w lokalnym rejestrze **Docker Registry**, a najnowsza wersja jest oznaczana jako \texttt{latest}. Dzięki temu wdrożenie nowej wersji sprowadza się do uruchomienia nowego kontenera:
 
 \begin{verbatim}
-docker tag nestops:${VERSION} localhost:5000/nestops:${VERSION}
-docker tag nestops:latest localhost:5000/nestops:latest
-docker push localhost:5000/nestops:${VERSION}
-docker push localhost:5000/nestops:latest
+docker pull localhost:5000/myapp:latest
+docker run -d --name myapp localhost:5000/myapp:latest
 \end{verbatim}
 
-Dzięki temu każda wersja aplikacji jest jednoznacznie identyfikowana, a \texttt{latest} wskazuje na najnowszą stabilną wersję. Takie podejście minimalizuje ryzyko niekontrolowanych zmian i ułatwia zarządzanie wdrożeniami.
+Dzięki temu każda wersja aplikacji jest jednoznacznie identyfikowana, a \texttt{latest} wskazuje na najnowszą stabilną wersję.
