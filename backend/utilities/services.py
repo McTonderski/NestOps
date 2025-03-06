@@ -51,17 +51,18 @@ async def scan_for_services():
                         and attribute is not AbstractDockerComposeManager
                     ):
                         db_service = await services_collection.find_one({"name": attribute.NAME})
+                        list_of_managers[attribute.NAME.lower()] = attribute(service_dir)
+                        status = list_of_managers[attribute.NAME.lower()].is_container_running()
                         if not db_service:
                             await services_collection.insert_one(
                                 {
                                     "name": attribute.NAME,
                                     "image": None,
                                     "description": None,
-                                    "status": "stopped",
+                                    "status": ServiceStatus.Running if status else ServiceStatus.Stopped,
                                     "container_id": None,
                                 }
                             )
-                        list_of_managers[attribute.NAME.lower()] = attribute(service_dir)
         except ModuleNotFoundError:
             logging.warning(f"Skipping {service} (module not found)")
 

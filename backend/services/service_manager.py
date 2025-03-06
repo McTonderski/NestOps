@@ -23,11 +23,11 @@ class AbstractDockerComposeManager(ABC):
     def log_error(self, message):
         logging.error(message)
 
-    def run_subprocess(self, command, check=True):
+    def run_subprocess(self, command, check=True, capture=False):
         """Runs a subprocess command inside the service directory."""
         try:
-            subprocess.run(command, cwd=self.directory, check=check, shell=False)
-            return True
+            out = subprocess.run(command, cwd=self.directory, check=check, shell=False, capture_output=capture,)
+            return True if not capture else out.stdout
         except subprocess.CalledProcessError as e:
             self.log_error(f"Error executing command in {self.directory}: {e}")
             return False
@@ -41,6 +41,19 @@ class AbstractDockerComposeManager(ABC):
         except Exception as e:
             logging.error(f"Docker is not installed or not running: {e}")
             sys.exit(1)
+    
+    def is_container_running(self):
+        """Check if the main container for this service is running."""
+        self.log_info(f"Checking if {self.NAME} is running...")
+        output = self.run_subprocess(["docker", "compose", "ps", "--services", "--filter", "status=running"], capture=True)
+        if output:
+            self.log_info(output)
+            running_services = str(output).split("\n")
+            if self.NAME.lower() in [service.lower() for service in running_services]:
+                self.log_info(f"{self.NAME} is running.")
+                return True
+        self.log_info(f"{self.NAME} is not running.")
+        return False
 
     @abstractmethod
     def update_docker_compose(self):
