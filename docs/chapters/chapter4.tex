@@ -17,3 +17,75 @@
 \subsection{Skrypty do automatycznego deploymentu}
 
 \subsection{Integracja z narzędziami CI/CD}
+\label{sec:integracja_ci_cd}
+
+Współczesne systemy informatyczne wymagają nie tylko solidnej implementacji, ale również efektywnego zarządzania cyklem życia oprogramowania. W tym kontekście, integracja narzędzi CI/CD (Continuous Integration / Continuous Deployment) odgrywa kluczową rolę w automatyzacji procesów budowania, testowania i wdrażania aplikacji.
+
+\subsubsection{Wersjonowanie obrazów Docker}
+
+Jednym z kluczowych aspektów zarządzania cyklem życia oprogramowania jest wersjonowanie obrazów Docker. W procesie CI/CD stosowanie jednoznacznych tagów wersji dla obrazów jest niezwykle istotne. 
+
+Złe praktyki, takie jak używanie tagu \texttt{latest}, mogą prowadzić do problemów, takich jak:
+\begin{itemize}
+    \item Brak gwarancji, że konkretna wersja obrazu zostanie pobrana – \texttt{latest} może odnosić się do różnych wersji w zależności od momentu pobrania.
+    \item Trudności w debugowaniu – jeśli nowa wersja obrazu powoduje błędy, brak jednoznacznej identyfikacji wersji utrudnia powrót do stabilnej wersji.
+    \item Potencjalne konflikty w środowiskach produkcyjnych – niekontrolowana zmiana wersji obrazu może prowadzić do nieoczekiwanych błędów.
+\end{itemize}
+
+Aby rozwiązać ten problem, obrazy powinny być wersjonowane według schematu \texttt{major.minor.patch} (np. \texttt{1.0.3}) oraz posiadać tag \texttt{latest} wskazujący na ostatnią stabilną wersję.
+
+\subsubsection{GitHub Actions – wersjonowanie obrazów Docker}
+
+W celu zapewnienia właściwego wersjonowania obrazów, GitHub Actions został skonfigurowany do:
+\begin{enumerate}
+    \item Budowania obrazu Docker po każdej zmianie w repozytorium.
+    \item Automatycznego generowania numeru wersji na podstawie SHA commita lub tagu.
+    \item Nadawania obrazowi dwóch tagów: \texttt{latest} oraz konkretnej wersji.
+\end{enumerate}
+
+Przykładowy plik konfiguracyjny GitHub Actions implementujący wersjonowanie obrazów wygląda następująco:
+
+\begin{verbatim}
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+
+jobs:
+  build_and_version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Extract Version
+        run: echo "VERSION=$(date +'%Y%m%d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Build Docker Image
+        run: |
+          docker build -t myapp:${{ env.VERSION }} .
+          docker tag myapp:${{ env.VERSION }} myapp:latest
+
+      - name: Save Docker Image
+        run: |
+          docker save myapp:${{ env.VERSION }} -o myapp_${{ env.VERSION }}.tar
+          docker save myapp:latest -o myapp_latest.tar
+\end{verbatim}
+
+\subsubsection{Publikacja obrazów w lokalnym registry}
+
+W powyższej konfiguracji obrazy Docker są budowane, ale nie są pushowane do zewnętrznych rejestrów. Wdrożenie do prywatnego rejestru (np. działającego na lokalnym serwerze) można wykonać po przełączeniu runnera na lokalnego i użyciu poniższych komend:
+
+\begin{verbatim}
+docker tag myapp:${VERSION} localhost:5000/myapp:${VERSION}
+docker tag myapp:latest localhost:5000/myapp:latest
+docker push localhost:5000/myapp:${VERSION}
+docker push localhost:5000/myapp:latest
+\end{verbatim}
+
+Dzięki temu każda wersja aplikacji jest jednoznacznie identyfikowana, a \texttt{latest} wskazuje na najnowszą stabilną wersję. Takie podejście minimalizuje ryzyko niekontrolowanych zmian i ułatwia zarządzanie wdrożeniami.
