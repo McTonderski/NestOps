@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.16)  7 MAR 2025 00:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.16)  7 MAR 2025 00:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -691,38 +691,38 @@ Package pdftex.def Info: ./chapters/mermeid/schemat_architektury.png  used on in
  [11] [12 <./chapters/mermeid/schemat_architektury.png>]) (./chapters/chapter4.tex [13]
 Chapter 4.
 
-Overfull \hbox (5.79384pt too wide) in paragraph at lines 22--23
+Overfull \hbox (5.79384pt too wide) in paragraph at lines 20--21
 \T1/cmr/m/n/12 Wspóªczesne sys-temy in-for-maty-czne wyma-gaj¡ nie tylko solid-nej im-ple-men-tacji, ale równie»
  []
 
 
-Overfull \hbox (0.73471pt too wide) in paragraph at lines 26--27
+Overfull \hbox (0.73471pt too wide) in paragraph at lines 24--25
 \T1/cmr/m/n/12 W celu za-pewnienia kom-paty-bil-no±ci ar-chitek-tury uru-chomieniowej sys-temu, zde-cy-dowano
  []
 
 [14
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 37.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 35.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [15]
-Overfull \hbox (100.37021pt too wide) in paragraph at lines 111--111
+Overfull \hbox (100.37021pt too wide) in paragraph at lines 109--109
 []        \T1/cmtt/m/n/12 run: echo "VERSION=$(date +'%Y%m%d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV[] 
  []
 
 
-Overfull \hbox (88.02322pt too wide) in paragraph at lines 111--111
+Overfull \hbox (88.02322pt too wide) in paragraph at lines 109--109
 []          \T1/cmtt/m/n/12 docker tag localhost:5000/myapp:${{ env.VERSION }} localhost:5000/myapp:latest[] 
  []
 
 [16]
-Overfull \hbox (1.74548pt too wide) in paragraph at lines 124--125
+Overfull \hbox (1.74548pt too wide) in paragraph at lines 122--123
 \T1/cmr/m/n/12 Wszystkie wer-sje ap-likacji s¡ au-tomaty-cznie prze-chowywane w lokalnym re-jestrze **Docker
  []
 
 ) (./chapters/chapter5.tex
-Overfull \hbox (6.29439pt too wide) in paragraph at lines 131--1
+Overfull \hbox (6.29439pt too wide) in paragraph at lines 129--1
 []\T1/cmr/m/n/12 Dzi¦ki temu ka»da wer-sja ap-likacji jest jed-noz-nacznie iden-ty-fikowana, a \T1/cmtt/m/n/12 latest \T1/cmr/m/n/12 wskazuje
  []
 
@@ -748,18 +748,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17254 strings out of 474116
- 301239 string characters out of 5743682
+ 17253 strings out of 474116
+ 301223 string characters out of 5743682
  1937187 words of memory out of 5000000
  39326 multiletter control sequences out of 15000+600000
  569766 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,6n,81p,875b,1294s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (21 pages, 877105 bytes).
+Output written on main.pdf (21 pages, 877090 bytes).
 PDF statistics:
- 336 PDF objects out of 1000 (max. 8388607)
- 288 compressed objects within 3 object streams
- 93 named destinations out of 1000 (max. 500000)
+ 335 PDF objects out of 1000 (max. 8388607)
+ 287 compressed objects within 3 object streams
+ 92 named destinations out of 1000 (max. 500000)
  187 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,12 +12,6 @@ jobs:
   test:
     runs-on: self-hosted
 
-    services:
-      mongo:
-        image: mongo:latest
-        ports:
-          - 27017:27017
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4

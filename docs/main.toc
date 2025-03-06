@@ -41,13 +41,12 @@
 \contentsline {subsection}{\numberline {4.2.1}Projekt UI/UX}{14}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Implementacja aplikacji webowej}{14}{subsection.4.2.2}%
 \contentsline {section}{\numberline {4.3}Automatyzacja Konfiguracji i wdrozenie}{14}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Skrypty do automatycznego deploymentu}{14}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Integracja z narzędziami CI/CD}{14}{subsection.4.3.2}%
-\contentsline {subsubsection}{Zastosowanie self-hosted runnera}{14}{subsection.4.3.2}%
-\contentsline {subsubsection}{Workflow GitHub Actions dla testowania}{15}{subsection.4.3.2}%
-\contentsline {subsubsection}{Workflow GitHub Actions dla budowania i wersjonowania obrazów Docker}{16}{subsection.4.3.2}%
-\contentsline {subsubsection}{Korzyści z bezpośredniego pushowania obrazu do registry}{17}{subsection.4.3.2}%
-\contentsline {subsubsection}{Publikacja obrazu do lokalnego registry}{17}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.1}Integracja z narzędziami CI/CD}{14}{subsection.4.3.1}%
+\contentsline {subsubsection}{Zastosowanie self-hosted runnera}{14}{subsection.4.3.1}%
+\contentsline {subsubsection}{Workflow GitHub Actions dla testowania}{15}{subsection.4.3.1}%
+\contentsline {subsubsection}{Workflow GitHub Actions dla budowania i wersjonowania obrazów Docker}{16}{subsection.4.3.1}%
+\contentsline {subsubsection}{Korzyści z bezpośredniego pushowania obrazu do registry}{17}{subsection.4.3.1}%
+\contentsline {subsubsection}{Publikacja obrazu do lokalnego registry}{17}{subsection.4.3.1}%
 \contentsline {chapter}{\numberline {5}Testowanie i analiza systemu}{18}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Testy jednostkowe i integracyjne}{18}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Testy wydajnościowe i bezpieczeństwa}{18}{section.5.2}%
