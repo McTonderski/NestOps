@@ -49,32 +49,32 @@ Przykładowy plik konfiguracyjny GitHub Actions implementujący wersjonowanie ob
 name: CI/CD Pipeline
 
 on:
-  push:
-    branches:
-      - main
-      - dev
-  pull_request:
-
+    push:
+      branches:
+        - main
+        - dev
+    pull_request:
+        branches: [develop]
 jobs:
-  build_and_version:
-    runs-on: ubuntu-latest
+    build_and_version:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
 
-      - name: Extract Version
-        run: echo "VERSION=$(date +'%Y%m%d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+            - name: Extract Version
+              run: echo "VERSION=$(date +'%Y%m%d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
-      - name: Build Docker Image
-        run: |
-          docker build -t myapp:${{ env.VERSION }} .
-          docker tag myapp:${{ env.VERSION }} myapp:latest
+            - name: Build Docker Image
+              run: |
+                docker build -t nestops:${{ env.VERSION }} -f backend/Dockerfile ./backend/
+                docker tag nestops:${{ env.VERSION }} nestops:latest
 
-      - name: Save Docker Image
-        run: |
-          docker save myapp:${{ env.VERSION }} -o myapp_${{ env.VERSION }}.tar
-          docker save myapp:latest -o myapp_latest.tar
+            - name: Save Docker Image
+              run: |
+                docker save nestops:${{ env.VERSION }} -o nestops${{ env.VERSION }}.tar
+                docker save nestops:latest -o nestops_latest.tar
 \end{verbatim}
 
 \subsubsection{Publikacja obrazów w lokalnym registry}
@@ -82,10 +82,10 @@ jobs:
 W powyższej konfiguracji obrazy Docker są budowane, ale nie są pushowane do zewnętrznych rejestrów. Wdrożenie do prywatnego rejestru (np. działającego na lokalnym serwerze) można wykonać po przełączeniu runnera na lokalnego i użyciu poniższych komend:
 
 \begin{verbatim}
-docker tag myapp:${VERSION} localhost:5000/myapp:${VERSION}
-docker tag myapp:latest localhost:5000/myapp:latest
-docker push localhost:5000/myapp:${VERSION}
-docker push localhost:5000/myapp:latest
+docker tag nestops:${VERSION} localhost:5000/nestops:${VERSION}
+docker tag nestops:latest localhost:5000/nestops:latest
+docker push localhost:5000/nestops:${VERSION}
+docker push localhost:5000/nestops:latest
 \end{verbatim}
 
 Dzięki temu każda wersja aplikacji jest jednoznacznie identyfikowana, a \texttt{latest} wskazuje na najnowszą stabilną wersję. Takie podejście minimalizuje ryzyko niekontrolowanych zmian i ułatwia zarządzanie wdrożeniami.

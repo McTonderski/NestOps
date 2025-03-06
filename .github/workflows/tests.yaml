@@ -4,7 +4,7 @@ on:
         - main
         - dev
     pull_request:
-        branches: [develop]
+        branches: [dev, main]
 jobs:
     build_and_version:
         runs-on: ubuntu-latest
@@ -18,10 +18,10 @@ jobs:
 
             - name: Build Docker Image
               run: |
-                docker build -t myapp:${{ env.VERSION }} .
-                docker tag myapp:${{ env.VERSION }} myapp:latest
+                docker build -t nestops:${{ env.VERSION }} -f backend/Dockerfile ./backend/
+                docker tag nestops:${{ env.VERSION }} nestops:latest
 
             - name: Save Docker Image
               run: |
-                docker save myapp:${{ env.VERSION }} -o myapp_${{ env.VERSION }}.tar
-                docker save myapp:latest -o myapp_latest.tar
+                docker save nestops:${{ env.VERSION }} -o nestops${{ env.VERSION }}.tar
+                docker save nestops:latest -o nestops_latest.tar
