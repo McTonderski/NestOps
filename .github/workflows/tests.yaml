@@ -4,24 +4,24 @@ on:
         - main
         - dev
     pull_request:
-  
-  jobs:
+        branches: [develop]
+jobs:
     build_and_version:
-      runs-on: ubuntu-latest
-  
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-  
-        - name: Extract Version
-          run: echo "VERSION=$(date +'%Y%m%d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-  
-        - name: Build Docker Image
-          run: |
-            docker build -t myapp:${{ env.VERSION }} .
-            docker tag myapp:${{ env.VERSION }} myapp:latest
-  
-        - name: Save Docker Image
-          run: |
-            docker save myapp:${{ env.VERSION }} -o myapp_${{ env.VERSION }}.tar
-            docker save myapp:latest -o myapp_latest.tar
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Extract Version
+              run: echo "VERSION=$(date +'%Y%m%d')-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+            - name: Build Docker Image
+              run: |
+                docker build -t myapp:${{ env.VERSION }} .
+                docker tag myapp:${{ env.VERSION }} myapp:latest
+
+            - name: Save Docker Image
+              run: |
+                docker save myapp:${{ env.VERSION }} -o myapp_${{ env.VERSION }}.tar
+                docker save myapp:latest -o myapp_latest.tar
