@@ -19,7 +19,7 @@ jobs:
 
             - name: Build Docker Image
               run: |
-                docker build -t localhost:5000/nestops:${{ env.VERSION }} .
+                docker build -t localhost:5000/nestops:${{ env.VERSION }} -f backend/Dockerfile ./backend/
                 docker tag localhost:5000/nestops:${{ env.VERSION }} localhost:5000/nestops:latest
       
             - name: Push Docker Image to Local Registry
