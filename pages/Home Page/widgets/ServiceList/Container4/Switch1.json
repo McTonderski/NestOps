@@ -4,7 +4,7 @@
   "animateLoading": true,
   "bottomRow": 7,
   "boxShadow": "none",
-  "defaultSwitchState": "{{ currentItem.status === 'running' }}",
+  "defaultSwitchState": true,
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
