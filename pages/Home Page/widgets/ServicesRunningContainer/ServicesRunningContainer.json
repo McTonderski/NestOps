@@ -55,7 +55,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "i2gkdaesc8",
-  "leftColumn": 35,
+  "leftColumn": 33,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "originalBottomRow": 19,
@@ -64,7 +64,7 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 45,
+  "rightColumn": 44,
   "searchTags": [
     "div",
     "parent",

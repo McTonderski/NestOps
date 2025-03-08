@@ -10,7 +10,7 @@
     {
       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 110,
+      "bottomRow": 90,
       "boxShadow": "none",
       "canExtend": false,
       "containerStyle": "none",
@@ -55,7 +55,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "i2gkdaesc8",
-  "leftColumn": 46,
+  "leftColumn": 45,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "originalBottomRow": 19,
