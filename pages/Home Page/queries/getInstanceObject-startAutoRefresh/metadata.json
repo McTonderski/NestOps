@@ -22,7 +22,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "fullyQualifiedName": "getInstanceObject.startAutoRefresh",
     "name": "startAutoRefresh",
     "pageId": "Home Page",

@@ -1,6 +1,8 @@
 export default {
 	async listServicesQuery() {
 		try {
+			
+				storeValue("services", [{"name": "demo", "status": "stopped"}]);
 			const response = await ServiceListGet.run();  // Run API request
 			if(appsmith.store.JWTToken === "" || response.status === 401){
 				storeValue("services", [{"name": "demo", "status": "stopped"}]);
